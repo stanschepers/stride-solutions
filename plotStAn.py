@@ -5,12 +5,10 @@ import sys
 
 
 def plot_cumulative_and_new_cases(file):
-
     data = pd.read_csv(file)
 
     data_cumulative = []
     data_difference = []
-
 
     for col in data:
         data_cumulative.append(data[col].copy())
@@ -24,7 +22,7 @@ def plot_cumulative_and_new_cases(file):
             if i == 0:
                 result.append(data_array[i])
             else:
-                result.append(data_array[i]-data_array[i-1])
+                result.append(data_array[i] - data_array[i - 1])
         data_difference[j] = pd.Series(result, copy=True)
 
     # Plot cumulative
@@ -42,7 +40,6 @@ def plot_cumulative_and_new_cases(file):
     plt.show()
     plt.close()  # clf
 
-
     # Plot difference
     for data_points in data_difference:
         data_points.plot(kind='line')
@@ -55,7 +52,6 @@ def plot_cumulative_and_new_cases(file):
 
 
 def final_freq_hist(file):
-
     data = pd.read_csv(file)
 
     final_frequencies = data.iloc[[-1]].squeeze()
