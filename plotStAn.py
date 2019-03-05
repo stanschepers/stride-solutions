@@ -54,7 +54,7 @@ def plot_cumulative_and_new_cases(file):
 def final_freq_hist(file):
     data = pd.read_csv(file)
 
-    final_frequencies = data.iloc[[-1]].squeeze()
+    final_frequencies = data.iloc[[-1]].squeeze().sort_values()
 
     x = np.arange(len(final_frequencies))
 
