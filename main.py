@@ -7,6 +7,7 @@ import numpy as np
 from matplotlib import pyplot as mp
 import os
 
+from memory_profiler import profile
 from pystride.Event import Event, EventType
 from pystride.PyController import PyController
 
@@ -53,41 +54,48 @@ def plotNewCases(outputPrefix, vaccinationLevels):
     plt.show()
 
 
-def plotPorfiling(name, levels, timings):
+def plotProfiling(name, levels, timings, bar=False):
     """
         Plot timings from profiling
     """
-    plt.plot(levels, timings)
+    if bar:
+        plt.bar(levels, timings)
+    else:
+        plt.plot(levels, timings)
     plt.xlabel(name)
-    plt.ylabel("time in secondes")
-    # plt.legend(legend)
-    plt.savefig('profiling_%s.png' % name)
+    plt.ylabel("Time (in seconds)")
+    plt.title("Time Profiling %s" % name)
+    # plt.suptitle("Default config")
+    plt.savefig('profiling_%s.png' % name.replace(" ", "_"))
     plt.show()
 
 
-def runSimulation(outputPrefix=None, vaccinationLevel=None, numDay=None, populationSize=None, seedingRate=None,
+# @profile
+def runSimulation(outputPrefix=None, immunityRate=None, numDay=None, populationSize=None, seedingRate=None,
                   contactLogMode=None):
     # Set up simulator
     control = PyController(data_dir="data")
     # Load configuration from file
-    if populationSize:
+    if populationSize is not None:
         control.loadRunConfig(os.path.join("config", "run_generate_default.xml"))
     else:
         control.loadRunConfig(os.path.join("config", "run_default.xml"))
     # Set some parameters
-    if numDay:
+    if numDay is not None:
         control.runConfig.setParameter("num_days", numDay)
 
-    if vaccinationLevel:
-        control.runConfig.setParameter("vaccine_rate", vaccinationLevel / 100)
+    if immunityRate is not None:
+        print(immunityRate)
+        control.runConfig.setParameter("immunity_rate", immunityRate)
 
-    if populationSize:
-        control.runConfig.setParameter("geopop_gen.population_size", populationSize)
+    if populationSize is not None:
+        pass
+        control.runConfig._etree.find("geopop_gen").find("population_size").text = str(populationSize)
 
-    if seedingRate:
+    if seedingRate is not None:
         control.runConfig.setParameter("seeding_rate", seedingRate)
 
-    if contactLogMode:
+    if contactLogMode is not None:
         control.runConfig.setParameter("contact_log_level", contactLogMode)
 
     control.runConfig.setParameter("output_cases", "false")
@@ -113,16 +121,16 @@ def main():
     days = np.linspace(start=10, stop=1000, num=20, dtype=np.int)
     timings_days = []
 
-    populationSize = np.linspace(1000, 10 ** 7, num=1000, dtype=np.int)
+    populationSize = np.linspace(1000, 10 ** 7, num=20, dtype=int)
     timings_populationSize = []
 
-    imunnityRate = np.linspace(1, 100, endpoint=False, num=9)
+    imunnityRate = np.linspace(0, 1, endpoint=False, num=100)
     timings_immunityRate = []
 
-    seedingRate = np.linspace(.00000166, .002, num=10)
+    seedingRate = np.linspace(.00000001, 1, num=20)
     timings_seedingRate = []
 
-    contactLogMode = ["None", "Transmissions"]
+    contactLogMode = ["None", "Transmissions", "All", "Susceptibles"]
     timings_contactLogMode = []
 
     # for nr in vaccinationLevels:
@@ -133,13 +141,46 @@ def main():
         pass
 
     # Run simulations
-    print(len(days))
-    for i, d in enumerate(days):
-        print(i)
-        wrapped = wrapper(runSimulation, outputPrefix=outputPrefix, numDay=d)
-        timings_days.append(timeit.timeit(wrapped))
+    # print(len(days))
+    # for i, d in enumerate(days):
+    #     print("Number %d/%d" % (i + 1, len(days)))
+    #     start = time.time()
+    #     runSimulation(outputPrefix, numDay=d)
+    #     timings_days.append(time.time() - start)
+    # plotProfiling("Days", days, timings_days)
 
-    plotPorfiling("Days", days, timings_days)
+    for i, p in enumerate(populationSize):
+        print("Number %d/%d" % (i, len(populationSize)))
+        start = time.time()
+        runSimulation(outputPrefix, populationSize=p)
+        timings_populationSize.append(time.time() - start)
+
+    plotProfiling("Population Size", populationSize, timings_populationSize)
+
+    # for i, r in enumerate(imunnityRate):
+    #     print("Number %d/%d" % (i, len(imunnityRate)))
+    #     start = time.time()
+    #     runSimulation(outputPrefix, immunityRate=r)
+    #     timings_immunityRate.append(time.time() - start)
+    #
+    # plotProfiling("Immunity Rate", imunnityRate, timings_immunityRate)
+
+    # for i, r in enumerate(seedingRate):
+    #     print("Number %d/%d" % (i, len(seedingRate)))
+    #     start = time.time()
+    #     runSimulation(outputPrefix)
+    #     timings_seedingRate.append(time.time() - start)
+    #
+    # plotProfiling("Seeding Rate", seedingRate, timings_seedingRate)
+
+    #
+    # for i, r in enumerate(contactLogMode):
+    #     print("Number %d/%d" % (i + 1, len(contactLogMode)))
+    #     start = time.time()
+    #     runSimulation(outputPrefix, contactLogMode=r)
+    #     timings_contactLogMode.append(time.time() - start)
+    #
+    # plotProfiling("Contact Log", [i for i in contactLogMode], timings_contactLogMode, bar=True)
 
     # Post-processing
     # plotNewCases(outputPrefix, vaccinationLevels)
