@@ -194,7 +194,7 @@ def plotImmAvgMultiR0(outputPrefix, vacRate=None, immRate=None, r0s=None,
                 avg_elem /= sim_count
                 avg.append(avg_elem)
 
-            legend.append("R0 = " + str(r0))
+            legend.append("$R_0$ = " + str(r0))
             plt.plot(days, avg)
 
         plt.xlabel("Simulation day")
@@ -211,9 +211,9 @@ if __name__ == "__main__":
     rng_seeds = range(1, 11)
     r0s = range(12, 19)
 
-    for lvl in immunityLevels:
+    # for lvl in immunityLevels:
     # for r0 in r0s:
-        for seed in rng_seeds:
-            runSim("AVG", immRate=lvl, rngSeed=seed)
-    # plotImmAvgMultiR0("AVG", immRate=70.8, r0s=r0s,  seeds=rng_seeds)
-    plotImmAvgAll("AVG", immRates=immunityLevels,  seeds=rng_seeds)
+    #     for seed in rng_seeds:
+    #         runSim("AVG", immRate=lvl, rngSeed=seed)
+    plotImmAvgMultiR0("AVG", immRate=70.8, r0s=r0s,  seeds=rng_seeds)
+    # plotImmAvgAll("AVG", immRates=immunityLevels,  seeds=rng_seeds)
