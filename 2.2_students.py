@@ -26,18 +26,21 @@ def trackCases(simulator, event):
 
 def vaccinateStudents(simulator, event):
     """
-        Callback function to track cumulative cases
-        after 7 days.
+        Callback function that sets people in the College pool immune after a week
     """
     outputPrefix = simulator.GetConfigValue("run.output_prefix")
     timestep = event.timestep
     cases = simulator.GetPopulation().GetInfectedCount()
 
-    if (timestep == 6): #dag0 is ook een dag
+    if (timestep >= 6): #dag0 is ook een dag
         pop = simulator.GetPopulation()
         for pIndex in range(pop.size()):
-            if pop[pIndex].GetHealth().IsSusceptible():
-                if 18 <= pop[pIndex].GetAge() <= 26:
+            # college = stride::ContactType::Id()
+
+            test = pop[pIndex].GetPoolId(2) #nummer 2 geeft de PoolId's voor College's
+                                            #wanneer als de persoon niet tot deze pool behoort geeft deze 0
+            if test != 0 and pop[pIndex].IsInPool(test):
+                if 18 <= pop[pIndex].GetAge() <= 26: #technisch gezien niet nodig, maar toch...
                     pop[pIndex].GetHealth().SetImmune()
 
 
@@ -85,12 +88,11 @@ def runSimulation(outputPrefix, vaccinated):
     control.runConfig.setParameter("contact_output_file", "false")
     control.runConfig.setParameter("output_prefix", outputPrefix)
     control.runConfig.setParameter("seeding_rate", 0.00000334) # Seed 2 infected persons in population of 600 000
+    control.runConfig.setParameter("vaccine_profile", "None")
 
     if(vaccinated):
-        control.runConfig.setParameter("vaccine_profile", "None")
         control.registerCallback(vaccinateStudents, EventType.Stepped)
     else:
-        control.runConfig.setParameter("vaccine_profile", "None")
         control.registerCallback(trackCases, EventType.Stepped)
 
     # Run simulation
