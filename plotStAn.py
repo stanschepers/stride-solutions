@@ -73,6 +73,10 @@ def final_freq_bar(file, sorted=False):
     x = np.arange(len(final_frequencies))
 
     plt.bar(x, height=final_frequencies)
+
+    plt.xlabel('Different simulations')
+    plt.ylabel('Final number of infected cases')
+
     plt.xticks([])
 
     # plt.hist(final_frequencies)
