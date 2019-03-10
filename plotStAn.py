@@ -54,12 +54,34 @@ def plot_cumulative_and_new_cases(file):
 def final_freq_hist(file):
     data = pd.read_csv(file)
 
-    final_frequencies = data.iloc[[-1]].squeeze().sort_values()
+    final_frequencies = data.iloc[[-1]].squeeze().tolist()
+
+    plt.hist(final_frequencies)
+    plt.xlabel("Final size after {} days".format(500))
+    plt.ylabel("Frequency")
+    plt.show()
+    plt.close()
+
+
+def final_freq_bar(file, sorted=False):
+    data = pd.read_csv(file)
+
+    final_frequencies = data.iloc[[-1]].squeeze()
+    if sorted:
+        final_frequencies = final_frequencies.sort_values()
 
     x = np.arange(len(final_frequencies))
 
     plt.bar(x, height=final_frequencies)
+
+    plt.xlabel('Different simulations')
+    plt.ylabel('Final number of infected cases')
+
     plt.xticks([])
+
+    # plt.hist(final_frequencies)
+    plt.xlabel("Simulations")
+    plt.ylabel("Final size after {} days".format(500))
     plt.show()
     plt.close()
 
@@ -71,3 +93,5 @@ if __name__ == "__main__":
     else:
         plot_cumulative_and_new_cases(sys.argv[1])
         final_freq_hist(sys.argv[1])
+        final_freq_bar(sys.argv[1])
+        final_freq_bar(sys.argv[1], sorted=True)

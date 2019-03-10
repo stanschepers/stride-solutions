@@ -217,3 +217,5 @@ if __name__ == "__main__":
     #         runSim("AVG", immRate=lvl, rngSeed=seed)
     plotImmAvgMultiR0("AVG", immRate=70.8, r0s=r0s,  seeds=rng_seeds)
     # plotImmAvgAll("AVG", immRates=immunityLevels,  seeds=rng_seeds)
+
+
