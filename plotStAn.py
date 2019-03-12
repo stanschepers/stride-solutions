@@ -36,7 +36,7 @@ def plot_cumulative_and_new_cases(file):
 
     plt.xlabel('Day in Simulation')
     plt.ylabel('Total number of infected cases')
-
+    plt.savefig('commuting.png')
     plt.show()
     plt.close()  # clf
 
@@ -70,6 +70,9 @@ def final_freq_bar(file, sorted=False):
     if sorted:
         final_frequencies = final_frequencies.sort_values()
 
+    for i in range(100):
+        print(final_frequencies[i])
+
     x = np.arange(len(final_frequencies))
 
     plt.bar(x, height=final_frequencies)
@@ -82,6 +85,7 @@ def final_freq_bar(file, sorted=False):
     # plt.hist(final_frequencies)
     plt.xlabel("Simulations")
     plt.ylabel("Final size after {} days".format(500))
+
     plt.show()
     plt.close()
 
@@ -92,6 +96,6 @@ if __name__ == "__main__":
               "analysis results.")
     else:
         plot_cumulative_and_new_cases(sys.argv[1])
-        final_freq_hist(sys.argv[1])
-        final_freq_bar(sys.argv[1])
-        final_freq_bar(sys.argv[1], sorted=True)
+        #final_freq_hist(sys.argv[1])
+        #final_freq_bar(sys.argv[1])
+        #final_freq_bar(sys.argv[1], sorted=True)
