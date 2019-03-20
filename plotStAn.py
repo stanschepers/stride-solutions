@@ -9,10 +9,17 @@ def plot_cumulative_and_new_cases(file):
 
     data_cumulative = []
     data_difference = []
+    data_difference_boxplot = []
+
+    boxplot_measure_interval = 1
+    boxplot_diffrence_interval = 1
 
     for col in data:
         data_cumulative.append(data[col].copy())
         data_difference.append(data[col].copy())
+
+    for _ in range(len(data_difference[0])):
+        data_difference_boxplot.append([])
 
     for j in range(len(data_difference)):
         data_array = data_difference[j]
@@ -21,8 +28,14 @@ def plot_cumulative_and_new_cases(file):
         for i in range(length):
             if i == 0:
                 result.append(data_array[i])
+                if max(data_array) > 100:
+                    data_difference_boxplot[i].append(data_array[i])
+
             else:
                 result.append(data_array[i] - data_array[i - 1])
+                if i%boxplot_measure_interval == 0:
+                    if max(data_array) > 100:
+                        data_difference_boxplot[i].append(data_array[i] - data_array[i - boxplot_diffrence_interval])
         data_difference[j] = pd.Series(result, copy=True)
 
     # Plot cumulative
@@ -31,12 +44,12 @@ def plot_cumulative_and_new_cases(file):
         if max(data_points) >= 100:
             outbreaks += 1
         data_points.plot(kind='line')
+    print("amount of outbreaks:", outbreaks)
 
     # print("Numer of outbreaks: {nr}".format(nr=outbreaks))
 
     plt.xlabel('Day in Simulation')
     plt.ylabel('Total number of infected cases')
-    plt.savefig('commuting.png')
     plt.show()
     plt.close()  # clf
 
@@ -45,6 +58,20 @@ def plot_cumulative_and_new_cases(file):
         data_points.plot(kind='line')
 
     plt.xlabel('Day in Simulation')
+    plt.ylabel('Number of new infected cases')
+
+    plt.show()
+    plt.close()  # clf
+
+    # Box plot
+    boxplot_data = []
+    for i in range(len(data_difference[0])):
+        if i%boxplot_measure_interval == 0:
+            boxplot_data.append(data_difference_boxplot[i])
+
+    plt.boxplot(boxplot_data)
+
+    plt.xlabel('Day * 10 in Simulation')
     plt.ylabel('Number of new infected cases')
 
     plt.show()
