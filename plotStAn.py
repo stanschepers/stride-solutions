@@ -28,8 +28,8 @@ def plot_cumulative_and_new_cases(file):
         for i in range(length):
             if i == 0:
                 result.append(data_array[i])
-                if max(data_array) > 100:
-                    data_difference_boxplot[i].append(data_array[i])
+                # if max(data_array) > 100:
+                #     data_difference_boxplot[i].append(data_array[i])
 
             else:
                 result.append(data_array[i] - data_array[i - 1])
@@ -66,12 +66,14 @@ def plot_cumulative_and_new_cases(file):
     # Box plot
     boxplot_data = []
     for i in range(len(data_difference[0])):
-        if i%boxplot_measure_interval == 0:
+        if i%boxplot_measure_interval == 0 and i != 0:
             boxplot_data.append(data_difference_boxplot[i])
 
     plt.boxplot(boxplot_data)
-
-    plt.xlabel('Day * 10 in Simulation')
+    if boxplot_measure_interval == 1:
+        plt.xlabel('Number of days in simulation')
+    else:
+        plt.xlabel('Number of ', boxplot_measure_interval,'days in simulation')
     plt.ylabel('Number of new infected cases')
 
     plt.show()
