@@ -11,8 +11,8 @@ def plot_cumulative_and_new_cases(file):
     data_difference = []
     data_difference_boxplot = []
 
-    boxplot_measure_interval = 1
-    boxplot_diffrence_interval = 1
+    boxplot_measure_interval = 10
+    boxplot_diffrence_interval = 10
 
     for col in data:
         data_cumulative.append(data[col].copy())
@@ -35,7 +35,7 @@ def plot_cumulative_and_new_cases(file):
                 result.append(data_array[i] - data_array[i - 1])
                 if i%boxplot_measure_interval == 0:
                     if max(data_array) > 100:
-                        data_difference_boxplot[i].append(data_array[i] - data_array[i - boxplot_diffrence_interval])
+                        data_difference_boxplot[i].append((data_array[i] - data_array[i - boxplot_diffrence_interval])/boxplot_diffrence_interval)
         data_difference[j] = pd.Series(result, copy=True)
 
     # Plot cumulative
@@ -72,9 +72,10 @@ def plot_cumulative_and_new_cases(file):
     plt.boxplot(boxplot_data)
     if boxplot_measure_interval == 1:
         plt.xlabel('Number of days in simulation')
+        plt.ylabel('Number of new infected cases')
     else:
-        plt.xlabel('Number of ', boxplot_measure_interval,'days in simulation')
-    plt.ylabel('Number of new infected cases')
+        plt.xlabel('Number of ' + str(boxplot_measure_interval) + ' days in simulation')
+        plt.ylabel('Avg number of new infected cases')
 
     plt.show()
     plt.close()  # clf
