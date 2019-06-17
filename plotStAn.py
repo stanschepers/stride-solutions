@@ -88,10 +88,9 @@ def plot_cumulative_and_new_cases(file):
         for row in col:
             i += 1
             if i == 100:
-                print(row)
                 data_end_infected.append(row)
         i = 0
-    plt.hist(data_end_infected, bins=4)
+    plt.hist(data_end_infected, bins=2)
     plt.xlabel('# of infected')
     plt.ylabel('# of simulations')
     plt.show()
