@@ -11,6 +11,8 @@ def plot_cumulative_and_new_cases(file):
     data_difference = []
     data_difference_boxplot = []
 
+    data_end_infected = []
+
     boxplot_measure_interval = 10
     boxplot_diffrence_interval = 10
 
@@ -79,6 +81,20 @@ def plot_cumulative_and_new_cases(file):
 
     plt.show()
     plt.close()  # clf
+
+    # Histogram with 2 bins (outbreaks/no outbreaks
+    i = 0
+    for col in data_cumulative:
+        for row in col:
+            i += 1
+            if i == 100:
+                print(row)
+                data_end_infected.append(row)
+        i = 0
+    plt.hist(data_end_infected, bins=4)
+    plt.xlabel('# of infected')
+    plt.ylabel('# of simulations')
+    plt.show()
 
 
 def final_freq_hist(file):
