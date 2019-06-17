@@ -1,0 +1,212 @@
+[2019-06-17 13:19:26.837] [stride_logger] [info] Stancontoller starting up at: Mon Jun 17 13:19:26 2019
+[2019-06-17 13:19:26.837] [stride_logger] [info] Executing revision: 16af0a4
+[2019-06-17 13:19:26.837] [stride_logger] [info] Processor count: 12
+[2019-06-17 13:19:26.837] [stride_logger] [info] Creating dir:  2019-06-17-13:19:26/
+[2019-06-17 13:19:26.837] [stride_logger] [trace] Executing:           /Users/stan/opt/stride/bin/stride
+[2019-06-17 13:19:26.837] [stride_logger] [trace] Current directory:   /Users/stan/opt/stride
+[2019-06-17 13:19:26.837] [stride_logger] [trace] Install directory:   /Users/stan/opt/stride
+[2019-06-17 13:19:26.837] [stride_logger] [trace] Config  directory:   /Users/stan/opt/stride/config
+[2019-06-17 13:19:26.837] [stride_logger] [trace] Data    directory:   /Users/stan/opt/stride/data
+[2019-06-17 13:19:26.847] [stride_logger] [info] Max number OpenMP threads in this environment: 12
+[2019-06-17 13:19:26.847] [stride_logger] [info] Configured number of threads: 12
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 3517691801
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 1211247141
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 3812510979
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 2061505111
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 660465077
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 860972465
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 2728237942
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 355255243
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 1915971619
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 3820561106
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 4061129663
+[2019-06-17 13:19:26.852] [stride_logger] [info] Starting run using seed 1381604252
+[2019-06-17 13:24:34.892] [stride_logger] [info] Starting run using seed 1053414875
+[2019-06-17 13:24:35.019] [stride_logger] [info] Starting run using seed 3651983544
+[2019-06-17 13:24:35.140] [stride_logger] [info] Starting run using seed 1273269589
+[2019-06-17 13:24:35.578] [stride_logger] [info] Starting run using seed 2219760733
+[2019-06-17 13:24:35.920] [stride_logger] [info] Starting run using seed 2108526925
+[2019-06-17 13:24:36.352] [stride_logger] [info] Starting run using seed 2161930103
+[2019-06-17 13:24:36.500] [stride_logger] [info] Starting run using seed 2692998386
+[2019-06-17 13:24:37.088] [stride_logger] [info] Starting run using seed 106787327
+[2019-06-17 13:24:37.202] [stride_logger] [info] Starting run using seed 3602268595
+[2019-06-17 13:24:37.463] [stride_logger] [info] Starting run using seed 4242573800
+[2019-06-17 13:24:38.586] [stride_logger] [info] Starting run using seed 2750993924
+[2019-06-17 13:24:40.031] [stride_logger] [info] Starting run using seed 1283532413
+[2019-06-17 13:30:00.594] [stride_logger] [info] Starting run using seed 3706110738
+[2019-06-17 13:30:02.300] [stride_logger] [info] Starting run using seed 474259412
+[2019-06-17 13:30:03.411] [stride_logger] [info] Starting run using seed 3281546896
+[2019-06-17 13:30:03.868] [stride_logger] [info] Starting run using seed 965842924
+[2019-06-17 13:30:11.681] [stride_logger] [info] Starting run using seed 2559223658
+[2019-06-17 13:30:11.745] [stride_logger] [info] Starting run using seed 3026848393
+[2019-06-17 13:30:22.519] [stride_logger] [info] Starting run using seed 2938022076
+[2019-06-17 13:30:22.813] [stride_logger] [info] Starting run using seed 368246617
+[2019-06-17 13:30:22.958] [stride_logger] [info] Starting run using seed 2222437953
+[2019-06-17 13:30:26.526] [stride_logger] [info] Starting run using seed 3615196120
+[2019-06-17 13:30:27.148] [stride_logger] [info] Starting run using seed 4065344952
+[2019-06-17 13:30:32.997] [stride_logger] [info] Starting run using seed 1764408686
+[2019-06-17 13:36:23.413] [stride_logger] [info] Starting run using seed 1216171164
+[2019-06-17 13:36:23.801] [stride_logger] [info] Starting run using seed 2457765450
+[2019-06-17 13:36:26.485] [stride_logger] [info] Starting run using seed 4264990770
+[2019-06-17 13:36:26.561] [stride_logger] [info] Starting run using seed 3927234186
+[2019-06-17 13:36:28.199] [stride_logger] [info] Starting run using seed 336800350
+[2019-06-17 13:36:28.301] [stride_logger] [info] Starting run using seed 3471724997
+[2019-06-17 13:36:30.975] [stride_logger] [info] Starting run using seed 2717377292
+[2019-06-17 13:36:32.971] [stride_logger] [info] Starting run using seed 1803388502
+[2019-06-17 13:36:45.902] [stride_logger] [info] Starting run using seed 2173866158
+[2019-06-17 13:36:46.703] [stride_logger] [info] Starting run using seed 1493362434
+[2019-06-17 13:36:46.756] [stride_logger] [info] Starting run using seed 966891467
+[2019-06-17 13:36:55.491] [stride_logger] [info] Starting run using seed 1530187334
+[2019-06-17 13:45:22.444] [stride_logger] [info] Starting run using seed 2226308822
+[2019-06-17 13:45:26.716] [stride_logger] [info] Starting run using seed 3526826106
+[2019-06-17 13:45:27.737] [stride_logger] [info] Starting run using seed 3073419881
+[2019-06-17 13:45:28.421] [stride_logger] [info] Starting run using seed 2973811257
+[2019-06-17 13:45:33.779] [stride_logger] [info] Starting run using seed 1229936988
+[2019-06-17 13:45:34.096] [stride_logger] [info] Starting run using seed 893714482
+[2019-06-17 13:45:34.175] [stride_logger] [info] Starting run using seed 3134596450
+[2019-06-17 13:45:35.986] [stride_logger] [info] Starting run using seed 4068056381
+[2019-06-17 13:45:48.134] [stride_logger] [info] Starting run using seed 2456845279
+[2019-06-17 13:45:49.187] [stride_logger] [info] Starting run using seed 2770019226
+[2019-06-17 13:45:51.659] [stride_logger] [info] Starting run using seed 1559985822
+[2019-06-17 13:45:53.652] [stride_logger] [info] Starting run using seed 3596508860
+[2019-06-17 13:52:37.860] [stride_logger] [info] Starting run using seed 2390427512
+[2019-06-17 13:52:42.652] [stride_logger] [info] Starting run using seed 4216908972
+[2019-06-17 13:53:03.677] [stride_logger] [info] Starting run using seed 1506718291
+[2019-06-17 13:53:12.558] [stride_logger] [info] Starting run using seed 4258061669
+[2019-06-17 13:53:12.946] [stride_logger] [info] Starting run using seed 3988241022
+[2019-06-17 13:53:12.961] [stride_logger] [info] Starting run using seed 1666227118
+[2019-06-17 13:53:13.911] [stride_logger] [info] Starting run using seed 2417940799
+[2019-06-17 13:53:19.424] [stride_logger] [info] Starting run using seed 4172713444
+[2019-06-17 13:53:22.748] [stride_logger] [info] Starting run using seed 3984708870
+[2019-06-17 13:53:27.051] [stride_logger] [info] Starting run using seed 2575934978
+[2019-06-17 13:53:27.460] [stride_logger] [info] Starting run using seed 3215946516
+[2019-06-17 13:53:30.927] [stride_logger] [info] Starting run using seed 3918028100
+[2019-06-17 14:01:08.289] [stride_logger] [info] Starting run using seed 1075170830
+[2019-06-17 14:01:08.341] [stride_logger] [info] Starting run using seed 1181732328
+[2019-06-17 14:01:18.636] [stride_logger] [info] Starting run using seed 2849096070
+[2019-06-17 14:01:18.791] [stride_logger] [info] Starting run using seed 1406647611
+[2019-06-17 14:01:19.435] [stride_logger] [info] Starting run using seed 3727142415
+[2019-06-17 14:01:20.016] [stride_logger] [info] Starting run using seed 3947185407
+[2019-06-17 14:01:20.104] [stride_logger] [info] Starting run using seed 1395120493
+[2019-06-17 14:01:22.089] [stride_logger] [info] Starting run using seed 2685550129
+[2019-06-17 14:01:22.334] [stride_logger] [info] Starting run using seed 9358475
+[2019-06-17 14:01:22.945] [stride_logger] [info] Starting run using seed 3760658422
+[2019-06-17 14:01:27.214] [stride_logger] [info] Starting run using seed 965206345
+[2019-06-17 14:01:44.676] [stride_logger] [info] Starting run using seed 3684478367
+[2019-06-17 14:07:26.248] [stride_logger] [info] Starting run using seed 4189354820
+[2019-06-17 14:07:30.593] [stride_logger] [info] Starting run using seed 1991615726
+[2019-06-17 14:07:34.546] [stride_logger] [info] Starting run using seed 2861454642
+[2019-06-17 14:07:35.099] [stride_logger] [info] Starting run using seed 1391324078
+[2019-06-17 14:07:38.614] [stride_logger] [info] Starting run using seed 4118141514
+[2019-06-17 14:07:38.920] [stride_logger] [info] Starting run using seed 2781753583
+[2019-06-17 14:07:40.086] [stride_logger] [info] Starting run using seed 489941605
+[2019-06-17 14:07:40.411] [stride_logger] [info] Starting run using seed 947711205
+[2019-06-17 14:07:42.069] [stride_logger] [info] Starting run using seed 1496074168
+[2019-06-17 14:07:45.514] [stride_logger] [info] Starting run using seed 184889828
+[2019-06-17 14:07:46.813] [stride_logger] [info] Starting run using seed 1651638648
+[2019-06-17 14:08:03.632] [stride_logger] [info] Starting run using seed 1493122367
+[2019-06-17 14:13:52.947] [stride_logger] [info] Starting run using seed 2419336320
+[2019-06-17 14:13:55.994] [stride_logger] [info] Starting run using seed 2863621409
+[2019-06-17 14:14:01.673] [stride_logger] [info] Starting run using seed 2890885873
+[2019-06-17 14:14:04.476] [stride_logger] [info] Starting run using seed 2261082357
+[2019-06-17 14:17:14.856] [stride_logger] [info] For run with seed 1211247141 final infected count is: 20331
+[2019-06-17 14:17:14.859] [stride_logger] [info] For run with seed 1053414875 final infected count is: 13374
+[2019-06-17 14:17:14.862] [stride_logger] [info] For run with seed 3706110738 final infected count is: 19687
+[2019-06-17 14:17:14.865] [stride_logger] [info] For run with seed 2457765450 final infected count is: 23014
+[2019-06-17 14:17:14.868] [stride_logger] [info] For run with seed 1229936988 final infected count is: 25476
+[2019-06-17 14:17:14.871] [stride_logger] [info] For run with seed 4258061669 final infected count is: 16133
+[2019-06-17 14:17:14.874] [stride_logger] [info] For run with seed 1395120493 final infected count is: 21560
+[2019-06-17 14:17:14.874] [stride_logger] [info] For run with seed 947711205 final infected count is: 13679
+[2019-06-17 14:17:14.874] [stride_logger] [info] For run with seed 2863621409 final infected count is: 15876
+[2019-06-17 14:17:14.874] [stride_logger] [info] For run with seed 2728237942 final infected count is: 13069
+[2019-06-17 14:17:14.877] [stride_logger] [info] For run with seed 2161930103 final infected count is: 16435
+[2019-06-17 14:17:14.880] [stride_logger] [info] For run with seed 1764408686 final infected count is: 20020
+[2019-06-17 14:17:14.883] [stride_logger] [info] For run with seed 1530187334 final infected count is: 14085
+[2019-06-17 14:17:14.885] [stride_logger] [info] For run with seed 3596508860 final infected count is: 25013
+[2019-06-17 14:17:14.893] [stride_logger] [info] For run with seed 3918028100 final infected count is: 14182
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 3684478367 final infected count is: 20936
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 1493122367 final infected count is: 14352
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 2261082357 final infected count is: 29103
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 1381604252 final infected count is: 18036
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 3602268595 final infected count is: 15348
+[2019-06-17 14:17:14.905] [stride_logger] [info] For run with seed 2222437953 final infected count is: 22479
+[2019-06-17 14:17:14.906] [stride_logger] [info] For run with seed 2717377292 final infected count is: 16293
+[2019-06-17 14:17:14.906] [stride_logger] [info] For run with seed 3073419881 final infected count is: 20517
+[2019-06-17 14:17:14.906] [stride_logger] [info] For run with seed 2390427512 final infected count is: 22062
+[2019-06-17 14:17:14.912] [stride_logger] [info] For run with seed 965206345 final infected count is: 12696
+[2019-06-17 14:17:14.912] [stride_logger] [info] For run with seed 4118141514 final infected count is: 17470
+[2019-06-17 14:17:14.912] [stride_logger] [info] For run with seed 2419336320 final infected count is: 26749
+[2019-06-17 14:17:14.914] [stride_logger] [info] For run with seed 3820561106 final infected count is: 22104
+[2019-06-17 14:17:14.914] [stride_logger] [info] For run with seed 2750993924 final infected count is: 16823
+[2019-06-17 14:17:14.915] [stride_logger] [info] For run with seed 3615196120 final infected count is: 27516
+[2019-06-17 14:17:14.915] [stride_logger] [info] For run with seed 2173866158 final infected count is: 20123
+[2019-06-17 14:17:14.916] [stride_logger] [info] For run with seed 2770019226 final infected count is: 18841
+[2019-06-17 14:17:14.916] [stride_logger] [info] For run with seed 2575934978 final infected count is: 20808
+[2019-06-17 14:17:14.917] [stride_logger] [info] For run with seed 3727142415 final infected count is: 13581
+[2019-06-17 14:17:14.917] [stride_logger] [info] For run with seed 1651638648 final infected count is: 17528
+[2019-06-17 14:17:14.917] [stride_logger] [info] For run with seed 2890885873 final infected count is: 13031
+[2019-06-17 14:17:14.917] [stride_logger] [info] For run with seed 3517691801 final infected count is: 20629
+[2019-06-17 14:17:14.917] [stride_logger] [info] For run with seed 1283532413 final infected count is: 16848
+[2019-06-17 14:17:14.918] [stride_logger] [info] For run with seed 368246617 final infected count is: 16603
+[2019-06-17 14:17:14.918] [stride_logger] [info] For run with seed 1493362434 final infected count is: 16237
+[2019-06-17 14:17:14.918] [stride_logger] [info] For run with seed 2456845279 final infected count is: 19122
+[2019-06-17 14:17:14.919] [stride_logger] [info] For run with seed 3984708870 final infected count is: 15652
+[2019-06-17 14:17:14.919] [stride_logger] [info] For run with seed 1406647611 final infected count is: 18727
+[2019-06-17 14:17:14.919] [stride_logger] [info] For run with seed 1496074168 final infected count is: 17959
+[2019-06-17 14:17:14.919] [stride_logger] [info] For run with seed 1915971619 final infected count is: 11041
+[2019-06-17 14:17:14.919] [stride_logger] [info] For run with seed 3651983544 final infected count is: 18551
+[2019-06-17 14:17:14.920] [stride_logger] [info] For run with seed 474259412 final infected count is: 14052
+[2019-06-17 14:17:14.920] [stride_logger] [info] For run with seed 1216171164 final infected count is: 24765
+[2019-06-17 14:17:14.921] [stride_logger] [info] For run with seed 4068056381 final infected count is: 11070
+[2019-06-17 14:17:14.921] [stride_logger] [info] For run with seed 2417940799 final infected count is: 18248
+[2019-06-17 14:17:14.921] [stride_logger] [info] For run with seed 9358475 final infected count is: 12660
+[2019-06-17 14:17:14.921] [stride_logger] [info] For run with seed 184889828 final infected count is: 18305
+[2019-06-17 14:17:14.921] [stride_logger] [info] For run with seed 660465077 final infected count is: 19279
+[2019-06-17 14:17:14.922] [stride_logger] [info] For run with seed 2692998386 final infected count is: 20798
+[2019-06-17 14:17:14.922] [stride_logger] [info] For run with seed 4065344952 final infected count is: 22930
+[2019-06-17 14:17:14.923] [stride_logger] [info] For run with seed 966891467 final infected count is: 16063
+[2019-06-17 14:17:14.923] [stride_logger] [info] For run with seed 1559985822 final infected count is: 15259
+[2019-06-17 14:17:14.923] [stride_logger] [info] For run with seed 3215946516 final infected count is: 18836
+[2019-06-17 14:17:14.955] [stride_logger] [info] For run with seed 2685550129 final infected count is: 18830
+[2019-06-17 14:17:14.955] [stride_logger] [info] For run with seed 489941605 final infected count is: 21592
+[2019-06-17 14:17:14.955] [stride_logger] [info] For run with seed 355255243 final infected count is: 20541
+[2019-06-17 14:17:14.955] [stride_logger] [info] For run with seed 2219760733 final infected count is: 21309
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 2559223658 final infected count is: 20804
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 3927234186 final infected count is: 21240
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 3134596450 final infected count is: 23182
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 4172713444 final infected count is: 13587
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 3947185407 final infected count is: 14795
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 2861454642 final infected count is: 17954
+[2019-06-17 14:17:14.956] [stride_logger] [info] For run with seed 4061129663 final infected count is: 17335
+[2019-06-17 14:17:14.957] [stride_logger] [info] For run with seed 1273269589 final infected count is: 13143
+[2019-06-17 14:17:14.957] [stride_logger] [info] For run with seed 965842924 final infected count is: 18407
+[2019-06-17 14:17:14.958] [stride_logger] [info] For run with seed 3471724997 final infected count is: 20196
+[2019-06-17 14:17:14.958] [stride_logger] [info] For run with seed 2226308822 final infected count is: 19353
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 1666227118 final infected count is: 21330
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 3760658422 final infected count is: 18804
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 2781753583 final infected count is: 10254
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 860972465 final infected count is: 27070
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 2108526925 final infected count is: 18629
+[2019-06-17 14:17:14.959] [stride_logger] [info] For run with seed 3281546896 final infected count is: 21921
+[2019-06-17 14:17:14.960] [stride_logger] [info] For run with seed 336800350 final infected count is: 14142
+[2019-06-17 14:17:14.960] [stride_logger] [info] For run with seed 2973811257 final infected count is: 11993
+[2019-06-17 14:17:14.960] [stride_logger] [info] For run with seed 1506718291 final infected count is: 21122
+[2019-06-17 14:17:14.961] [stride_logger] [info] For run with seed 1181732328 final infected count is: 22759
+[2019-06-17 14:17:14.961] [stride_logger] [info] For run with seed 4189354820 final infected count is: 29756
+[2019-06-17 14:17:14.961] [stride_logger] [info] For run with seed 2061505111 final infected count is: 17051
+[2019-06-17 14:17:14.962] [stride_logger] [info] For run with seed 4242573800 final infected count is: 11280
+[2019-06-17 14:17:14.963] [stride_logger] [info] For run with seed 2938022076 final infected count is: 21669
+[2019-06-17 14:17:14.963] [stride_logger] [info] For run with seed 1803388502 final infected count is: 18648
+[2019-06-17 14:17:14.964] [stride_logger] [info] For run with seed 893714482 final infected count is: 20993
+[2019-06-17 14:17:14.964] [stride_logger] [info] For run with seed 3988241022 final infected count is: 9391
+[2019-06-17 14:17:14.964] [stride_logger] [info] For run with seed 2849096070 final infected count is: 22197
+[2019-06-17 14:17:14.964] [stride_logger] [info] For run with seed 1391324078 final infected count is: 23132
+[2019-06-17 14:17:14.964] [stride_logger] [info] For run with seed 3812510979 final infected count is: 19373
+[2019-06-17 14:17:14.965] [stride_logger] [info] For run with seed 106787327 final infected count is: 17940
+[2019-06-17 14:17:14.965] [stride_logger] [info] For run with seed 3026848393 final infected count is: 20818
+[2019-06-17 14:17:14.966] [stride_logger] [info] For run with seed 4264990770 final infected count is: 13153
+[2019-06-17 14:17:14.966] [stride_logger] [info] For run with seed 3526826106 final infected count is: 14942
+[2019-06-17 14:17:14.966] [stride_logger] [info] For run with seed 4216908972 final infected count is: 16726
+[2019-06-17 14:17:14.967] [stride_logger] [info] For run with seed 1075170830 final infected count is: 21628
+[2019-06-17 14:17:14.967] [stride_logger] [info] For run with seed 1991615726 final infected count is: 18781
+[2019-06-17 14:17:14.987] [stride_logger] [info] Stancontoller shutting down after: 00:57:48:105:174
