@@ -3,6 +3,40 @@ import pandas as pd
 import numpy as np
 import sys
 
+def averageCumulative(file, amount_of_days, amount_of_simulations):
+    data = pd.read_csv(file)
+
+    data_list = []
+
+    for value in data:
+        data_list.append(data[value].copy())
+
+    data_result = []
+    for i in range(amount_of_days):
+        value = 0
+        for j in range(amount_of_simulations):
+            value += int(data_list[j][i])
+        data_result.append(int(value / amount_of_simulations))
+
+    return pd.Series(data_result, copy=True)
+
+
+def average_of_two_files(file1, file2):
+    amount_of_days = 100
+    amount_of_simulations = 100
+
+    data1 = averageCumulative(file1, amount_of_days, amount_of_simulations)
+    data2 = averageCumulative(file2, amount_of_days, amount_of_simulations)
+
+    data1.plot(kind='line', label='Daycare & Preschool')
+    data2.plot(kind='line', label='Without')
+
+    plt.xlabel('Day in Simulation')
+    plt.ylabel('Average total number of infected cases')
+    plt.legend()
+    plt.show()
+    plt.close()  # clf
+
 
 def plot_cumulative_and_new_cases(file):
     data = pd.read_csv(file)
@@ -127,7 +161,9 @@ def final_freq_bar(file, sorted=False):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) == 3:
+        average_of_two_files(sys.argv[1], sys.argv[2])
+    elif len(sys.argv) != 2:
         print("Please supply (only) the name of the file containing stochastic "
               "analysis results.")
     else:
