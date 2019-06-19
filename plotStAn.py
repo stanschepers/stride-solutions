@@ -3,13 +3,19 @@ import pandas as pd
 import numpy as np
 import sys
 
-def averageCumulative(file, amount_of_days, amount_of_simulations):
+def averageCumulative(file, amount_of_days, amount_of_simulations, name):
     data = pd.read_csv(file)
 
     data_list = []
 
     for value in data:
         data_list.append(data[value].copy())
+
+    outbreaks = 0
+    for data_points in data_list:
+        if max(data_points) >= 100:
+            outbreaks += 1
+    print("Amount of outbreaks for {}:".format(name), outbreaks)
 
     data_result = []
     for i in range(amount_of_days):
@@ -21,15 +27,22 @@ def averageCumulative(file, amount_of_days, amount_of_simulations):
     return pd.Series(data_result, copy=True)
 
 
-def average_of_two_files(file1, file2):
-    amount_of_days = 100
+def average_of_files(files):
+    files = files[1:]
+    amount_of_days = 50
     amount_of_simulations = 100
+    names = ['DayPre', 'Broeckho'] #['Flanders', 'Belgium', 'Flanders as part of Belgium']
 
-    data1 = averageCumulative(file1, amount_of_days, amount_of_simulations)
-    data2 = averageCumulative(file2, amount_of_days, amount_of_simulations)
+    if not len(names) == len(files):
+        print('Not enough/too much names provided in the code!')
+        return
 
-    data1.plot(kind='line', label='Daycare & Preschool')
-    data2.plot(kind='line', label='Without')
+    data = []
+    for i in range(len(files)):
+        data.append(averageCumulative(files[i], amount_of_days, amount_of_simulations, names[i]))
+
+    for i in range(len(data)):
+        data[i].plot(kind='line', label=names[i])
 
     plt.xlabel('Day in Simulation')
     plt.ylabel('Average total number of infected cases')
@@ -161,8 +174,8 @@ def final_freq_bar(file, sorted=False):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        average_of_two_files(sys.argv[1], sys.argv[2])
+    if len(sys.argv) > 2:
+        average_of_files(sys.argv)
     elif len(sys.argv) != 2:
         print("Please supply (only) the name of the file containing stochastic "
               "analysis results.")
