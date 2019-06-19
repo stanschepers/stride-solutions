@@ -1,0 +1,692 @@
+[2019-06-19 18:33:56.908] [stride_logger] [info] SimController starting up at: Wed Jun 19 18:33:56 2019
+[2019-06-19 18:33:56.908] [stride_logger] [info] Executing revision: 815c3f5
+[2019-06-19 18:33:56.908] [stride_logger] [info] Processor count: 4
+[2019-06-19 18:33:56.908] [stride_logger] [info] Creating dir:  2019-06-19-18:33:56/
+[2019-06-19 18:33:56.908] [stride_logger] [trace] Executing:           /Users/Andrei/University/BachelorThesis/stride/cmake-build-debug-mp-clang-7/installed/bin/stride
+[2019-06-19 18:33:56.908] [stride_logger] [trace] Current directory:   /Users/Andrei/University/BachelorThesis/stride/cmake-build-debug-mp-clang-7/installed
+[2019-06-19 18:33:56.908] [stride_logger] [trace] Install directory:   /Users/Andrei/University/BachelorThesis/stride/cmake-build-debug-mp-clang-7/installed
+[2019-06-19 18:33:56.908] [stride_logger] [trace] Config  directory:   /Users/Andrei/University/BachelorThesis/stride/cmake-build-debug-mp-clang-7/installed/config
+[2019-06-19 18:33:56.908] [stride_logger] [trace] Data    directory:   /Users/Andrei/University/BachelorThesis/stride/cmake-build-debug-mp-clang-7/installed/data
+[2019-06-19 18:33:56.952] [stride_logger] [info] Max number OpenMP threads in this environment: 4
+[2019-06-19 18:33:56.952] [stride_logger] [info] Configured number of threads: 1
+[2019-06-19 18:33:56.961] [stride_logger] [trace] Config :
+ <?xml version="1.0" encoding="utf-8"?>
+<run>
+        <age_contact_matrix_file>contact_matrix_flanders_subpop.xml</age_contact_matrix_file>
+        <contact_log_level>Transmissions</contact_log_level>
+        <contact_output_file>true</contact_output_file>
+        <disease_config_file>disease_measles.xml</disease_config_file>
+        <holidays_file>holidays_none.json</holidays_file>
+        <immunity_profile>None</immunity_profile>
+        <immunity_rate>0.8</immunity_rate>
+        <num_days>500</num_days>
+        <num_participants_survey>10</num_participants_survey>
+        <num_threads>1</num_threads>
+        <output_cases>true</output_cases>
+        <output_persons>false</output_persons>
+        <output_prefix>2019-06-19-18:33:56/</output_prefix>
+        <output_summary>false</output_summary>
+        <population_file>gengeopop.proto</population_file>
+        <population_type>generate</population_type>
+        <rng_seed>1</rng_seed>
+        <rng_type>mrg2</rng_type>
+        <r0>11</r0>
+        <seeding_age_max>99</seeding_age_max>
+        <seeding_age_min>1</seeding_age_min>
+        <seeding_rate>0.000004615</seeding_rate>
+        <start_date>2017-01-01</start_date>
+        <stride_log_level>trace</stride_log_level>
+        <track_index_case>false</track_index_case>
+        <use_install_dirs>true</use_install_dirs>
+        <vaccine_link_probability>0</vaccine_link_probability>
+        <vaccine_profile>Random</vaccine_profile>
+        <vaccine_rate>0.8</vaccine_rate>
+        <epi_output>
+                <stride>25</stride>
+                <file_type>proto</file_type>
+        </epi_output>
+        <geopop_gen>
+                <cities_file>flanders_cities_provinces.csv</cities_file>
+                <commuting_file>flanders_commuting.csv</commuting_file>
+                <fraction_college_commuters>0.5</fraction_college_commuters>
+                <fraction_workplace_commuters>0.5</fraction_workplace_commuters>
+                <households>
+                        <household>
+                                <population_id>1</population_id>
+                                <household_file>households_antwerp.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>2</population_id>
+                                <household_file>households_flemish_brabant.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>3</population_id>
+                                <household_file>households_west_flanders.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>4</population_id>
+                                <household_file>households_east_flanders.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>7</population_id>
+                                <household_file>households_limburg.csv</household_file>
+                        </household>
+                </households>
+                <participation_daycare>0.45</participation_daycare>
+                <participation_preschool>0.99</participation_preschool>
+                <participation_college>0.5</participation_college>
+                <participation_workplace>0.75</participation_workplace>
+                <distribution_file>workplace_size_distribution_flanders.csv</distribution_file>
+                <population_size>650000</population_size>
+        </geopop_gen>
+</run>
+
+[2019-06-19 18:33:56.963] [stride_logger] [info] Contact logging requested; logger set up.
+[2019-06-19 18:33:56.963] [stride_logger] [info] Invoking GeoPopBuilder.
+[2019-06-19 18:33:56.963] [stride_logger] [trace] Building geopop.
+[2019-06-19 18:33:58.178] [stride_logger] [trace] Detected work distribution file.
+[2019-06-19 18:33:58.178] [stride_logger] [trace] Starting MakeLocations
+[2019-06-19 18:33:58.482] [stride_logger] [trace] Finished MakeLocations
+[2019-06-19 18:33:58.482] [stride_logger] [trace] Starting MakePools
+[2019-06-19 18:33:58.484] [stride_logger] [trace] Number of workplaces through distribution file: 17794, instead of: 14757
+[2019-06-19 18:33:58.526] [stride_logger] [trace] Total generated size in workplaces: 287643
+[2019-06-19 18:33:58.527] [stride_logger] [trace] Total number of employees: 295137
+[2019-06-19 18:33:58.611] [stride_logger] [trace] Finished MakePools
+[2019-06-19 18:33:58.611] [stride_logger] [trace] Starting MakePersons
+[2019-06-19 18:33:58.611] [stride_logger] [trace] Starting to populate Households
+[2019-06-19 18:33:59.095] [stride_logger] [trace] Done populating Households
+[2019-06-19 18:33:59.095] [stride_logger] [trace] Starting to populate Daycare's
+[2019-06-19 18:33:59.208] [stride_logger] [trace] Done populating Daycare's
+[2019-06-19 18:33:59.208] [stride_logger] [trace] Starting to populate PreSchools
+[2019-06-19 18:33:59.355] [stride_logger] [trace] Done populating PreSchools
+[2019-06-19 18:33:59.355] [stride_logger] [trace] Starting to populate Schools
+[2019-06-19 18:33:59.458] [stride_logger] [trace] Done populating K12Schools
+[2019-06-19 18:33:59.458] [stride_logger] [trace] Starting to populate Colleges
+[2019-06-19 18:33:59.738] [stride_logger] [trace] Done populating Colleges
+[2019-06-19 18:33:59.738] [stride_logger] [trace] Starting to populate Primary Communities
+[2019-06-19 18:33:59.924] [stride_logger] [trace] Done populating Primary Communities
+[2019-06-19 18:33:59.924] [stride_logger] [trace] Starting to populate Secondary Communities
+[2019-06-19 18:34:00.051] [stride_logger] [trace] Done populating Secondary Communities
+[2019-06-19 18:34:00.051] [stride_logger] [trace] Starting to populate Workplaces
+[2019-06-19 18:34:01.852] [stride_logger] [trace] Done populating Workplaces
+[2019-06-19 18:34:01.852] [stride_logger] [trace] Finished MakePersons
+[2019-06-19 18:34:01.852] [stride_logger] [trace] Done building geopop.
+[2019-06-19 18:34:03.233] [stride_logger] [info] Registering CliViewer
+[2019-06-19 18:34:03.233] [stride_logger] [info] Registering InfectedFileViewer
+[2019-06-19 18:34:03.234] [stride_logger] [info] Registering EpiOutputViewer
+[2019-06-19 18:34:28.076] [stride_logger] [info]    SimRunner at start:
+[2019-06-19 18:34:28.077] [stride_logger] [trace] Run config used:
+ <?xml version="1.0" encoding="utf-8"?>
+<run>
+        <age_contact_matrix_file>contact_matrix_flanders_subpop.xml</age_contact_matrix_file>
+        <contact_log_level>Transmissions</contact_log_level>
+        <contact_output_file>true</contact_output_file>
+        <disease_config_file>disease_measles.xml</disease_config_file>
+        <holidays_file>holidays_none.json</holidays_file>
+        <immunity_profile>None</immunity_profile>
+        <immunity_rate>0.8</immunity_rate>
+        <num_days>500</num_days>
+        <num_participants_survey>10</num_participants_survey>
+        <num_threads>1</num_threads>
+        <output_cases>true</output_cases>
+        <output_persons>false</output_persons>
+        <output_prefix>2019-06-19-18:33:56/</output_prefix>
+        <output_summary>false</output_summary>
+        <population_file>gengeopop.proto</population_file>
+        <population_type>generate</population_type>
+        <rng_seed>1</rng_seed>
+        <rng_type>mrg2</rng_type>
+        <r0>11</r0>
+        <seeding_age_max>99</seeding_age_max>
+        <seeding_age_min>1</seeding_age_min>
+        <seeding_rate>0.000004615</seeding_rate>
+        <start_date>2017-01-01</start_date>
+        <stride_log_level>trace</stride_log_level>
+        <track_index_case>false</track_index_case>
+        <use_install_dirs>true</use_install_dirs>
+        <vaccine_link_probability>0</vaccine_link_probability>
+        <vaccine_profile>Random</vaccine_profile>
+        <vaccine_rate>0.8</vaccine_rate>
+        <epi_output>
+                <stride>25</stride>
+                <file_type>proto</file_type>
+        </epi_output>
+        <geopop_gen>
+                <cities_file>flanders_cities_provinces.csv</cities_file>
+                <commuting_file>flanders_commuting.csv</commuting_file>
+                <fraction_college_commuters>0.5</fraction_college_commuters>
+                <fraction_workplace_commuters>0.5</fraction_workplace_commuters>
+                <households>
+                        <household>
+                                <population_id>1</population_id>
+                                <household_file>households_antwerp.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>2</population_id>
+                                <household_file>households_flemish_brabant.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>3</population_id>
+                                <household_file>households_west_flanders.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>4</population_id>
+                                <household_file>households_east_flanders.csv</household_file>
+                        </household>
+                        <household>
+                                <population_id>7</population_id>
+                                <household_file>households_limburg.csv</household_file>
+                        </household>
+                </households>
+                <participation_daycare>0.45</participation_daycare>
+                <participation_preschool>0.99</participation_preschool>
+                <participation_college>0.5</participation_college>
+                <participation_workplace>0.75</participation_workplace>
+                <distribution_file>workplace_size_distribution_flanders.csv</distribution_file>
+                <population_size>650000</population_size>
+        </geopop_gen>
+</run>
+
+[2019-06-19 18:34:28.098] [stride_logger] [info]       Day:    0  Done, infected count:       3
+[2019-06-19 18:34:28.320] [stride_logger] [info]       Day:    1  Done, infected count:       3
+[2019-06-19 18:34:28.548] [stride_logger] [info]       Day:    2  Done, infected count:       3
+[2019-06-19 18:34:28.729] [stride_logger] [info]       Day:    3  Done, infected count:       3
+[2019-06-19 18:34:28.915] [stride_logger] [info]       Day:    4  Done, infected count:       3
+[2019-06-19 18:34:29.093] [stride_logger] [info]       Day:    5  Done, infected count:       3
+[2019-06-19 18:34:29.276] [stride_logger] [info]       Day:    6  Done, infected count:       3
+[2019-06-19 18:34:29.442] [stride_logger] [info]       Day:    7  Done, infected count:       3
+[2019-06-19 18:34:29.619] [stride_logger] [info]       Day:    8  Done, infected count:       5
+[2019-06-19 18:34:29.795] [stride_logger] [info]       Day:    9  Done, infected count:       6
+[2019-06-19 18:34:29.982] [stride_logger] [info]       Day:   10  Done, infected count:      11
+[2019-06-19 18:34:30.169] [stride_logger] [info]       Day:   11  Done, infected count:      12
+[2019-06-19 18:34:30.349] [stride_logger] [info]       Day:   12  Done, infected count:      12
+[2019-06-19 18:34:30.533] [stride_logger] [info]       Day:   13  Done, infected count:      12
+[2019-06-19 18:34:30.708] [stride_logger] [info]       Day:   14  Done, infected count:      12
+[2019-06-19 18:34:30.877] [stride_logger] [info]       Day:   15  Done, infected count:      12
+[2019-06-19 18:34:31.059] [stride_logger] [info]       Day:   16  Done, infected count:      12
+[2019-06-19 18:34:31.237] [stride_logger] [info]       Day:   17  Done, infected count:      12
+[2019-06-19 18:34:31.417] [stride_logger] [info]       Day:   18  Done, infected count:      14
+[2019-06-19 18:34:31.598] [stride_logger] [info]       Day:   19  Done, infected count:      22
+[2019-06-19 18:34:31.787] [stride_logger] [info]       Day:   20  Done, infected count:      26
+[2019-06-19 18:34:31.951] [stride_logger] [info]       Day:   21  Done, infected count:      26
+[2019-06-19 18:34:32.124] [stride_logger] [info]       Day:   22  Done, infected count:      28
+[2019-06-19 18:34:32.305] [stride_logger] [info]       Day:   23  Done, infected count:      29
+[2019-06-19 18:34:32.492] [stride_logger] [info]       Day:   24  Done, infected count:      37
+[2019-06-19 18:34:57.947] [stride_logger] [info]       Day:   25  Done, infected count:      40
+[2019-06-19 18:34:58.123] [stride_logger] [info]       Day:   26  Done, infected count:      41
+[2019-06-19 18:34:58.306] [stride_logger] [info]       Day:   27  Done, infected count:      46
+[2019-06-19 18:34:58.475] [stride_logger] [info]       Day:   28  Done, infected count:      50
+[2019-06-19 18:34:58.663] [stride_logger] [info]       Day:   29  Done, infected count:      51
+[2019-06-19 18:34:58.841] [stride_logger] [info]       Day:   30  Done, infected count:      53
+[2019-06-19 18:34:59.023] [stride_logger] [info]       Day:   31  Done, infected count:      59
+[2019-06-19 18:34:59.220] [stride_logger] [info]       Day:   32  Done, infected count:      71
+[2019-06-19 18:34:59.400] [stride_logger] [info]       Day:   33  Done, infected count:      76
+[2019-06-19 18:34:59.586] [stride_logger] [info]       Day:   34  Done, infected count:      83
+[2019-06-19 18:34:59.769] [stride_logger] [info]       Day:   35  Done, infected count:      87
+[2019-06-19 18:34:59.942] [stride_logger] [info]       Day:   36  Done, infected count:      90
+[2019-06-19 18:35:00.125] [stride_logger] [info]       Day:   37  Done, infected count:      90
+[2019-06-19 18:35:00.311] [stride_logger] [info]       Day:   38  Done, infected count:      95
+[2019-06-19 18:35:00.497] [stride_logger] [info]       Day:   39  Done, infected count:     101
+[2019-06-19 18:35:00.684] [stride_logger] [info]       Day:   40  Done, infected count:     113
+[2019-06-19 18:35:00.868] [stride_logger] [info]       Day:   41  Done, infected count:     123
+[2019-06-19 18:35:01.034] [stride_logger] [info]       Day:   42  Done, infected count:     133
+[2019-06-19 18:35:01.224] [stride_logger] [info]       Day:   43  Done, infected count:     154
+[2019-06-19 18:35:01.402] [stride_logger] [info]       Day:   44  Done, infected count:     167
+[2019-06-19 18:35:01.584] [stride_logger] [info]       Day:   45  Done, infected count:     176
+[2019-06-19 18:35:01.777] [stride_logger] [info]       Day:   46  Done, infected count:     183
+[2019-06-19 18:35:01.958] [stride_logger] [info]       Day:   47  Done, infected count:     189
+[2019-06-19 18:35:02.141] [stride_logger] [info]       Day:   48  Done, infected count:     199
+[2019-06-19 18:35:02.325] [stride_logger] [info]       Day:   49  Done, infected count:     212
+[2019-06-19 18:35:27.184] [stride_logger] [info]       Day:   50  Done, infected count:     224
+[2019-06-19 18:35:27.383] [stride_logger] [info]       Day:   51  Done, infected count:     236
+[2019-06-19 18:35:27.566] [stride_logger] [info]       Day:   52  Done, infected count:     257
+[2019-06-19 18:35:27.749] [stride_logger] [info]       Day:   53  Done, infected count:     288
+[2019-06-19 18:35:27.943] [stride_logger] [info]       Day:   54  Done, infected count:     311
+[2019-06-19 18:35:28.133] [stride_logger] [info]       Day:   55  Done, infected count:     337
+[2019-06-19 18:35:28.326] [stride_logger] [info]       Day:   56  Done, infected count:     372
+[2019-06-19 18:35:28.493] [stride_logger] [info]       Day:   57  Done, infected count:     384
+[2019-06-19 18:35:28.683] [stride_logger] [info]       Day:   58  Done, infected count:     399
+[2019-06-19 18:35:28.880] [stride_logger] [info]       Day:   59  Done, infected count:     414
+[2019-06-19 18:35:29.070] [stride_logger] [info]       Day:   60  Done, infected count:     439
+[2019-06-19 18:35:29.252] [stride_logger] [info]       Day:   61  Done, infected count:     482
+[2019-06-19 18:35:29.446] [stride_logger] [info]       Day:   62  Done, infected count:     519
+[2019-06-19 18:35:29.623] [stride_logger] [info]       Day:   63  Done, infected count:     543
+[2019-06-19 18:35:29.797] [stride_logger] [info]       Day:   64  Done, infected count:     575
+[2019-06-19 18:35:29.991] [stride_logger] [info]       Day:   65  Done, infected count:     638
+[2019-06-19 18:35:30.180] [stride_logger] [info]       Day:   66  Done, infected count:     683
+[2019-06-19 18:35:30.384] [stride_logger] [info]       Day:   67  Done, infected count:     735
+[2019-06-19 18:35:30.572] [stride_logger] [info]       Day:   68  Done, infected count:     783
+[2019-06-19 18:35:30.758] [stride_logger] [info]       Day:   69  Done, infected count:     829
+[2019-06-19 18:35:30.935] [stride_logger] [info]       Day:   70  Done, infected count:     864
+[2019-06-19 18:35:31.105] [stride_logger] [info]       Day:   71  Done, infected count:     897
+[2019-06-19 18:35:31.300] [stride_logger] [info]       Day:   72  Done, infected count:     951
+[2019-06-19 18:35:31.495] [stride_logger] [info]       Day:   73  Done, infected count:    1007
+[2019-06-19 18:35:31.683] [stride_logger] [info]       Day:   74  Done, infected count:    1065
+[2019-06-19 18:35:57.005] [stride_logger] [info]       Day:   75  Done, infected count:    1143
+[2019-06-19 18:35:57.207] [stride_logger] [info]       Day:   76  Done, infected count:    1232
+[2019-06-19 18:35:57.395] [stride_logger] [info]       Day:   77  Done, infected count:    1300
+[2019-06-19 18:35:57.598] [stride_logger] [info]       Day:   78  Done, infected count:    1365
+[2019-06-19 18:35:57.788] [stride_logger] [info]       Day:   79  Done, infected count:    1458
+[2019-06-19 18:35:57.985] [stride_logger] [info]       Day:   80  Done, infected count:    1570
+[2019-06-19 18:35:58.180] [stride_logger] [info]       Day:   81  Done, infected count:    1670
+[2019-06-19 18:35:58.377] [stride_logger] [info]       Day:   82  Done, infected count:    1756
+[2019-06-19 18:35:58.577] [stride_logger] [info]       Day:   83  Done, infected count:    1852
+[2019-06-19 18:35:58.771] [stride_logger] [info]       Day:   84  Done, infected count:    1925
+[2019-06-19 18:35:58.947] [stride_logger] [info]       Day:   85  Done, infected count:    2021
+[2019-06-19 18:35:59.153] [stride_logger] [info]       Day:   86  Done, infected count:    2163
+[2019-06-19 18:35:59.349] [stride_logger] [info]       Day:   87  Done, infected count:    2314
+[2019-06-19 18:35:59.565] [stride_logger] [info]       Day:   88  Done, infected count:    2477
+[2019-06-19 18:35:59.765] [stride_logger] [info]       Day:   89  Done, infected count:    2636
+[2019-06-19 18:35:59.964] [stride_logger] [info]       Day:   90  Done, infected count:    2814
+[2019-06-19 18:36:00.155] [stride_logger] [info]       Day:   91  Done, infected count:    2951
+[2019-06-19 18:36:00.338] [stride_logger] [info]       Day:   92  Done, infected count:    3081
+[2019-06-19 18:36:00.544] [stride_logger] [info]       Day:   93  Done, infected count:    3272
+[2019-06-19 18:36:00.744] [stride_logger] [info]       Day:   94  Done, infected count:    3467
+[2019-06-19 18:36:00.954] [stride_logger] [info]       Day:   95  Done, infected count:    3669
+[2019-06-19 18:36:01.164] [stride_logger] [info]       Day:   96  Done, infected count:    3872
+[2019-06-19 18:36:01.383] [stride_logger] [info]       Day:   97  Done, infected count:    4108
+[2019-06-19 18:36:01.608] [stride_logger] [info]       Day:   98  Done, infected count:    4320
+[2019-06-19 18:36:01.798] [stride_logger] [info]       Day:   99  Done, infected count:    4516
+[2019-06-19 18:36:27.195] [stride_logger] [info]       Day:  100  Done, infected count:    4786
+[2019-06-19 18:36:27.398] [stride_logger] [info]       Day:  101  Done, infected count:    5018
+[2019-06-19 18:36:27.623] [stride_logger] [info]       Day:  102  Done, infected count:    5320
+[2019-06-19 18:36:27.840] [stride_logger] [info]       Day:  103  Done, infected count:    5629
+[2019-06-19 18:36:28.060] [stride_logger] [info]       Day:  104  Done, infected count:    5947
+[2019-06-19 18:36:28.279] [stride_logger] [info]       Day:  105  Done, infected count:    6217
+[2019-06-19 18:36:28.474] [stride_logger] [info]       Day:  106  Done, infected count:    6482
+[2019-06-19 18:36:28.697] [stride_logger] [info]       Day:  107  Done, infected count:    6811
+[2019-06-19 18:36:28.929] [stride_logger] [info]       Day:  108  Done, infected count:    7174
+[2019-06-19 18:36:29.178] [stride_logger] [info]       Day:  109  Done, infected count:    7563
+[2019-06-19 18:36:29.416] [stride_logger] [info]       Day:  110  Done, infected count:    8001
+[2019-06-19 18:36:29.641] [stride_logger] [info]       Day:  111  Done, infected count:    8343
+[2019-06-19 18:36:29.856] [stride_logger] [info]       Day:  112  Done, infected count:    8669
+[2019-06-19 18:36:30.090] [stride_logger] [info]       Day:  113  Done, infected count:    8971
+[2019-06-19 18:36:30.333] [stride_logger] [info]       Day:  114  Done, infected count:    9429
+[2019-06-19 18:36:30.567] [stride_logger] [info]       Day:  115  Done, infected count:    9865
+[2019-06-19 18:36:30.818] [stride_logger] [info]       Day:  116  Done, infected count:   10340
+[2019-06-19 18:36:31.070] [stride_logger] [info]       Day:  117  Done, infected count:   10920
+[2019-06-19 18:36:31.324] [stride_logger] [info]       Day:  118  Done, infected count:   11398
+[2019-06-19 18:36:31.541] [stride_logger] [info]       Day:  119  Done, infected count:   11802
+[2019-06-19 18:36:31.779] [stride_logger] [info]       Day:  120  Done, infected count:   12237
+[2019-06-19 18:36:32.024] [stride_logger] [info]       Day:  121  Done, infected count:   12795
+[2019-06-19 18:36:32.277] [stride_logger] [info]       Day:  122  Done, infected count:   13306
+[2019-06-19 18:36:32.541] [stride_logger] [info]       Day:  123  Done, infected count:   13916
+[2019-06-19 18:36:32.804] [stride_logger] [info]       Day:  124  Done, infected count:   14460
+[2019-06-19 18:36:57.694] [stride_logger] [info]       Day:  125  Done, infected count:   15044
+[2019-06-19 18:36:57.948] [stride_logger] [info]       Day:  126  Done, infected count:   15559
+[2019-06-19 18:36:58.200] [stride_logger] [info]       Day:  127  Done, infected count:   16144
+[2019-06-19 18:36:58.474] [stride_logger] [info]       Day:  128  Done, infected count:   16819
+[2019-06-19 18:36:58.735] [stride_logger] [info]       Day:  129  Done, infected count:   17554
+[2019-06-19 18:36:59.021] [stride_logger] [info]       Day:  130  Done, infected count:   18277
+[2019-06-19 18:36:59.287] [stride_logger] [info]       Day:  131  Done, infected count:   19034
+[2019-06-19 18:36:59.555] [stride_logger] [info]       Day:  132  Done, infected count:   19806
+[2019-06-19 18:36:59.816] [stride_logger] [info]       Day:  133  Done, infected count:   20388
+[2019-06-19 18:37:00.079] [stride_logger] [info]       Day:  134  Done, infected count:   20898
+[2019-06-19 18:37:00.351] [stride_logger] [info]       Day:  135  Done, infected count:   21618
+[2019-06-19 18:37:00.620] [stride_logger] [info]       Day:  136  Done, infected count:   22364
+[2019-06-19 18:37:00.909] [stride_logger] [info]       Day:  137  Done, infected count:   23194
+[2019-06-19 18:37:01.193] [stride_logger] [info]       Day:  138  Done, infected count:   24077
+[2019-06-19 18:37:01.497] [stride_logger] [info]       Day:  139  Done, infected count:   24931
+[2019-06-19 18:37:01.769] [stride_logger] [info]       Day:  140  Done, infected count:   25623
+[2019-06-19 18:37:02.064] [stride_logger] [info]       Day:  141  Done, infected count:   26346
+[2019-06-19 18:37:02.345] [stride_logger] [info]       Day:  142  Done, infected count:   27228
+[2019-06-19 18:37:02.632] [stride_logger] [info]       Day:  143  Done, infected count:   28153
+[2019-06-19 18:37:02.929] [stride_logger] [info]       Day:  144  Done, infected count:   29135
+[2019-06-19 18:37:03.223] [stride_logger] [info]       Day:  145  Done, infected count:   29989
+[2019-06-19 18:37:03.512] [stride_logger] [info]       Day:  146  Done, infected count:   30896
+[2019-06-19 18:37:03.813] [stride_logger] [info]       Day:  147  Done, infected count:   31657
+[2019-06-19 18:37:04.093] [stride_logger] [info]       Day:  148  Done, infected count:   32493
+[2019-06-19 18:37:04.389] [stride_logger] [info]       Day:  149  Done, infected count:   33511
+[2019-06-19 18:37:28.644] [stride_logger] [info]       Day:  150  Done, infected count:   34491
+[2019-06-19 18:37:28.934] [stride_logger] [info]       Day:  151  Done, infected count:   35553
+[2019-06-19 18:37:29.227] [stride_logger] [info]       Day:  152  Done, infected count:   36507
+[2019-06-19 18:37:29.526] [stride_logger] [info]       Day:  153  Done, infected count:   37600
+[2019-06-19 18:37:29.811] [stride_logger] [info]       Day:  154  Done, infected count:   38483
+[2019-06-19 18:37:30.098] [stride_logger] [info]       Day:  155  Done, infected count:   39332
+[2019-06-19 18:37:30.396] [stride_logger] [info]       Day:  156  Done, infected count:   40449
+[2019-06-19 18:37:30.704] [stride_logger] [info]       Day:  157  Done, infected count:   41488
+[2019-06-19 18:37:31.001] [stride_logger] [info]       Day:  158  Done, infected count:   42545
+[2019-06-19 18:37:31.301] [stride_logger] [info]       Day:  159  Done, infected count:   43668
+[2019-06-19 18:37:31.616] [stride_logger] [info]       Day:  160  Done, infected count:   44762
+[2019-06-19 18:37:31.908] [stride_logger] [info]       Day:  161  Done, infected count:   45755
+[2019-06-19 18:37:32.213] [stride_logger] [info]       Day:  162  Done, infected count:   46717
+[2019-06-19 18:37:32.528] [stride_logger] [info]       Day:  163  Done, infected count:   47900
+[2019-06-19 18:37:32.846] [stride_logger] [info]       Day:  164  Done, infected count:   49126
+[2019-06-19 18:37:33.161] [stride_logger] [info]       Day:  165  Done, infected count:   50316
+[2019-06-19 18:37:33.470] [stride_logger] [info]       Day:  166  Done, infected count:   51522
+[2019-06-19 18:37:33.784] [stride_logger] [info]       Day:  167  Done, infected count:   52660
+[2019-06-19 18:37:34.090] [stride_logger] [info]       Day:  168  Done, infected count:   53615
+[2019-06-19 18:37:34.387] [stride_logger] [info]       Day:  169  Done, infected count:   54583
+[2019-06-19 18:37:34.713] [stride_logger] [info]       Day:  170  Done, infected count:   55855
+[2019-06-19 18:37:35.039] [stride_logger] [info]       Day:  171  Done, infected count:   57086
+[2019-06-19 18:37:35.362] [stride_logger] [info]       Day:  172  Done, infected count:   58413
+[2019-06-19 18:37:35.693] [stride_logger] [info]       Day:  173  Done, infected count:   59615
+[2019-06-19 18:37:36.018] [stride_logger] [info]       Day:  174  Done, infected count:   60970
+[2019-06-19 18:38:00.301] [stride_logger] [info]       Day:  175  Done, infected count:   62025
+[2019-06-19 18:38:00.600] [stride_logger] [info]       Day:  176  Done, infected count:   63066
+[2019-06-19 18:38:00.929] [stride_logger] [info]       Day:  177  Done, infected count:   64307
+[2019-06-19 18:38:01.259] [stride_logger] [info]       Day:  178  Done, infected count:   65606
+[2019-06-19 18:38:01.585] [stride_logger] [info]       Day:  179  Done, infected count:   66863
+[2019-06-19 18:38:01.913] [stride_logger] [info]       Day:  180  Done, infected count:   68223
+[2019-06-19 18:38:02.239] [stride_logger] [info]       Day:  181  Done, infected count:   69487
+[2019-06-19 18:38:02.537] [stride_logger] [info]       Day:  182  Done, infected count:   70491
+[2019-06-19 18:38:02.844] [stride_logger] [info]       Day:  183  Done, infected count:   71565
+[2019-06-19 18:38:03.167] [stride_logger] [info]       Day:  184  Done, infected count:   72796
+[2019-06-19 18:38:03.490] [stride_logger] [info]       Day:  185  Done, infected count:   74061
+[2019-06-19 18:38:03.826] [stride_logger] [info]       Day:  186  Done, infected count:   75257
+[2019-06-19 18:38:04.142] [stride_logger] [info]       Day:  187  Done, infected count:   76429
+[2019-06-19 18:38:04.460] [stride_logger] [info]       Day:  188  Done, infected count:   77570
+[2019-06-19 18:38:04.758] [stride_logger] [info]       Day:  189  Done, infected count:   78519
+[2019-06-19 18:38:05.059] [stride_logger] [info]       Day:  190  Done, infected count:   79543
+[2019-06-19 18:38:05.381] [stride_logger] [info]       Day:  191  Done, infected count:   80725
+[2019-06-19 18:38:05.696] [stride_logger] [info]       Day:  192  Done, infected count:   81835
+[2019-06-19 18:38:06.009] [stride_logger] [info]       Day:  193  Done, infected count:   82881
+[2019-06-19 18:38:06.324] [stride_logger] [info]       Day:  194  Done, infected count:   83910
+[2019-06-19 18:38:06.624] [stride_logger] [info]       Day:  195  Done, infected count:   84908
+[2019-06-19 18:38:06.903] [stride_logger] [info]       Day:  196  Done, infected count:   85735
+[2019-06-19 18:38:07.192] [stride_logger] [info]       Day:  197  Done, infected count:   86550
+[2019-06-19 18:38:07.479] [stride_logger] [info]       Day:  198  Done, infected count:   87468
+[2019-06-19 18:38:07.776] [stride_logger] [info]       Day:  199  Done, infected count:   88368
+[2019-06-19 18:38:32.080] [stride_logger] [info]       Day:  200  Done, infected count:   89258
+[2019-06-19 18:38:32.373] [stride_logger] [info]       Day:  201  Done, infected count:   90093
+[2019-06-19 18:38:32.659] [stride_logger] [info]       Day:  202  Done, infected count:   90925
+[2019-06-19 18:38:32.934] [stride_logger] [info]       Day:  203  Done, infected count:   91624
+[2019-06-19 18:38:33.200] [stride_logger] [info]       Day:  204  Done, infected count:   92297
+[2019-06-19 18:38:33.480] [stride_logger] [info]       Day:  205  Done, infected count:   93023
+[2019-06-19 18:38:33.759] [stride_logger] [info]       Day:  206  Done, infected count:   93734
+[2019-06-19 18:38:34.029] [stride_logger] [info]       Day:  207  Done, infected count:   94371
+[2019-06-19 18:38:34.304] [stride_logger] [info]       Day:  208  Done, infected count:   94969
+[2019-06-19 18:38:34.564] [stride_logger] [info]       Day:  209  Done, infected count:   95523
+[2019-06-19 18:38:34.812] [stride_logger] [info]       Day:  210  Done, infected count:   96008
+[2019-06-19 18:38:35.049] [stride_logger] [info]       Day:  211  Done, infected count:   96455
+[2019-06-19 18:38:35.310] [stride_logger] [info]       Day:  212  Done, infected count:   97006
+[2019-06-19 18:38:35.569] [stride_logger] [info]       Day:  213  Done, infected count:   97439
+[2019-06-19 18:38:35.827] [stride_logger] [info]       Day:  214  Done, infected count:   97894
+[2019-06-19 18:38:36.072] [stride_logger] [info]       Day:  215  Done, infected count:   98332
+[2019-06-19 18:38:36.322] [stride_logger] [info]       Day:  216  Done, infected count:   98719
+[2019-06-19 18:38:36.541] [stride_logger] [info]       Day:  217  Done, infected count:   99055
+[2019-06-19 18:38:36.758] [stride_logger] [info]       Day:  218  Done, infected count:   99372
+[2019-06-19 18:38:36.997] [stride_logger] [info]       Day:  219  Done, infected count:   99739
+[2019-06-19 18:38:37.222] [stride_logger] [info]       Day:  220  Done, infected count:  100023
+[2019-06-19 18:38:37.451] [stride_logger] [info]       Day:  221  Done, infected count:  100286
+[2019-06-19 18:38:37.671] [stride_logger] [info]       Day:  222  Done, infected count:  100568
+[2019-06-19 18:38:37.906] [stride_logger] [info]       Day:  223  Done, infected count:  100822
+[2019-06-19 18:38:38.120] [stride_logger] [info]       Day:  224  Done, infected count:  101010
+[2019-06-19 18:39:02.399] [stride_logger] [info]       Day:  225  Done, infected count:  101215
+[2019-06-19 18:39:02.614] [stride_logger] [info]       Day:  226  Done, infected count:  101442
+[2019-06-19 18:39:02.826] [stride_logger] [info]       Day:  227  Done, infected count:  101648
+[2019-06-19 18:39:03.041] [stride_logger] [info]       Day:  228  Done, infected count:  101810
+[2019-06-19 18:39:03.249] [stride_logger] [info]       Day:  229  Done, infected count:  102003
+[2019-06-19 18:39:03.471] [stride_logger] [info]       Day:  230  Done, infected count:  102175
+[2019-06-19 18:39:03.661] [stride_logger] [info]       Day:  231  Done, infected count:  102304
+[2019-06-19 18:39:03.861] [stride_logger] [info]       Day:  232  Done, infected count:  102412
+[2019-06-19 18:39:04.070] [stride_logger] [info]       Day:  233  Done, infected count:  102560
+[2019-06-19 18:39:04.269] [stride_logger] [info]       Day:  234  Done, infected count:  102679
+[2019-06-19 18:39:04.476] [stride_logger] [info]       Day:  235  Done, infected count:  102781
+[2019-06-19 18:39:04.673] [stride_logger] [info]       Day:  236  Done, infected count:  102863
+[2019-06-19 18:39:04.880] [stride_logger] [info]       Day:  237  Done, infected count:  102962
+[2019-06-19 18:39:05.064] [stride_logger] [info]       Day:  238  Done, infected count:  103030
+[2019-06-19 18:39:05.250] [stride_logger] [info]       Day:  239  Done, infected count:  103098
+[2019-06-19 18:39:05.457] [stride_logger] [info]       Day:  240  Done, infected count:  103178
+[2019-06-19 18:39:05.655] [stride_logger] [info]       Day:  241  Done, infected count:  103240
+[2019-06-19 18:39:05.859] [stride_logger] [info]       Day:  242  Done, infected count:  103300
+[2019-06-19 18:39:06.054] [stride_logger] [info]       Day:  243  Done, infected count:  103355
+[2019-06-19 18:39:06.249] [stride_logger] [info]       Day:  244  Done, infected count:  103415
+[2019-06-19 18:39:06.437] [stride_logger] [info]       Day:  245  Done, infected count:  103458
+[2019-06-19 18:39:06.621] [stride_logger] [info]       Day:  246  Done, infected count:  103507
+[2019-06-19 18:39:06.813] [stride_logger] [info]       Day:  247  Done, infected count:  103544
+[2019-06-19 18:39:07.010] [stride_logger] [info]       Day:  248  Done, infected count:  103580
+[2019-06-19 18:39:07.198] [stride_logger] [info]       Day:  249  Done, infected count:  103616
+[2019-06-19 18:39:31.373] [stride_logger] [info]       Day:  250  Done, infected count:  103643
+[2019-06-19 18:39:31.571] [stride_logger] [info]       Day:  251  Done, infected count:  103671
+[2019-06-19 18:39:31.750] [stride_logger] [info]       Day:  252  Done, infected count:  103702
+[2019-06-19 18:39:31.924] [stride_logger] [info]       Day:  253  Done, infected count:  103726
+[2019-06-19 18:39:32.119] [stride_logger] [info]       Day:  254  Done, infected count:  103746
+[2019-06-19 18:39:32.304] [stride_logger] [info]       Day:  255  Done, infected count:  103759
+[2019-06-19 18:39:32.503] [stride_logger] [info]       Day:  256  Done, infected count:  103774
+[2019-06-19 18:39:32.689] [stride_logger] [info]       Day:  257  Done, infected count:  103801
+[2019-06-19 18:39:32.878] [stride_logger] [info]       Day:  258  Done, infected count:  103826
+[2019-06-19 18:39:33.063] [stride_logger] [info]       Day:  259  Done, infected count:  103837
+[2019-06-19 18:39:33.243] [stride_logger] [info]       Day:  260  Done, infected count:  103857
+[2019-06-19 18:39:33.427] [stride_logger] [info]       Day:  261  Done, infected count:  103869
+[2019-06-19 18:39:33.617] [stride_logger] [info]       Day:  262  Done, infected count:  103882
+[2019-06-19 18:39:33.800] [stride_logger] [info]       Day:  263  Done, infected count:  103893
+[2019-06-19 18:39:33.993] [stride_logger] [info]       Day:  264  Done, infected count:  103903
+[2019-06-19 18:39:34.178] [stride_logger] [info]       Day:  265  Done, infected count:  103912
+[2019-06-19 18:39:34.351] [stride_logger] [info]       Day:  266  Done, infected count:  103913
+[2019-06-19 18:39:34.534] [stride_logger] [info]       Day:  267  Done, infected count:  103916
+[2019-06-19 18:39:34.719] [stride_logger] [info]       Day:  268  Done, infected count:  103924
+[2019-06-19 18:39:34.904] [stride_logger] [info]       Day:  269  Done, infected count:  103927
+[2019-06-19 18:39:35.093] [stride_logger] [info]       Day:  270  Done, infected count:  103935
+[2019-06-19 18:39:35.293] [stride_logger] [info]       Day:  271  Done, infected count:  103942
+[2019-06-19 18:39:35.529] [stride_logger] [info]       Day:  272  Done, infected count:  103950
+[2019-06-19 18:39:35.742] [stride_logger] [info]       Day:  273  Done, infected count:  103953
+[2019-06-19 18:39:35.933] [stride_logger] [info]       Day:  274  Done, infected count:  103956
+[2019-06-19 18:40:00.137] [stride_logger] [info]       Day:  275  Done, infected count:  103958
+[2019-06-19 18:40:00.324] [stride_logger] [info]       Day:  276  Done, infected count:  103963
+[2019-06-19 18:40:00.509] [stride_logger] [info]       Day:  277  Done, infected count:  103965
+[2019-06-19 18:40:00.705] [stride_logger] [info]       Day:  278  Done, infected count:  103967
+[2019-06-19 18:40:00.890] [stride_logger] [info]       Day:  279  Done, infected count:  103969
+[2019-06-19 18:40:01.062] [stride_logger] [info]       Day:  280  Done, infected count:  103976
+[2019-06-19 18:40:01.242] [stride_logger] [info]       Day:  281  Done, infected count:  103978
+[2019-06-19 18:40:01.423] [stride_logger] [info]       Day:  282  Done, infected count:  103980
+[2019-06-19 18:40:01.610] [stride_logger] [info]       Day:  283  Done, infected count:  103981
+[2019-06-19 18:40:01.793] [stride_logger] [info]       Day:  284  Done, infected count:  103981
+[2019-06-19 18:40:01.978] [stride_logger] [info]       Day:  285  Done, infected count:  103981
+[2019-06-19 18:40:02.168] [stride_logger] [info]       Day:  286  Done, infected count:  103984
+[2019-06-19 18:40:02.340] [stride_logger] [info]       Day:  287  Done, infected count:  103985
+[2019-06-19 18:40:02.507] [stride_logger] [info]       Day:  288  Done, infected count:  103985
+[2019-06-19 18:40:02.704] [stride_logger] [info]       Day:  289  Done, infected count:  103986
+[2019-06-19 18:40:02.887] [stride_logger] [info]       Day:  290  Done, infected count:  103987
+[2019-06-19 18:40:03.072] [stride_logger] [info]       Day:  291  Done, infected count:  103987
+[2019-06-19 18:40:03.263] [stride_logger] [info]       Day:  292  Done, infected count:  103987
+[2019-06-19 18:40:03.446] [stride_logger] [info]       Day:  293  Done, infected count:  103987
+[2019-06-19 18:40:03.622] [stride_logger] [info]       Day:  294  Done, infected count:  103987
+[2019-06-19 18:40:03.797] [stride_logger] [info]       Day:  295  Done, infected count:  103989
+[2019-06-19 18:40:03.977] [stride_logger] [info]       Day:  296  Done, infected count:  103990
+[2019-06-19 18:40:04.173] [stride_logger] [info]       Day:  297  Done, infected count:  103992
+[2019-06-19 18:40:04.356] [stride_logger] [info]       Day:  298  Done, infected count:  103992
+[2019-06-19 18:40:04.543] [stride_logger] [info]       Day:  299  Done, infected count:  103992
+[2019-06-19 18:40:28.805] [stride_logger] [info]       Day:  300  Done, infected count:  103992
+[2019-06-19 18:40:28.984] [stride_logger] [info]       Day:  301  Done, infected count:  103994
+[2019-06-19 18:40:29.155] [stride_logger] [info]       Day:  302  Done, infected count:  103994
+[2019-06-19 18:40:29.337] [stride_logger] [info]       Day:  303  Done, infected count:  103995
+[2019-06-19 18:40:29.528] [stride_logger] [info]       Day:  304  Done, infected count:  103995
+[2019-06-19 18:40:29.712] [stride_logger] [info]       Day:  305  Done, infected count:  103995
+[2019-06-19 18:40:29.905] [stride_logger] [info]       Day:  306  Done, infected count:  103995
+[2019-06-19 18:40:30.092] [stride_logger] [info]       Day:  307  Done, infected count:  103996
+[2019-06-19 18:40:30.269] [stride_logger] [info]       Day:  308  Done, infected count:  103996
+[2019-06-19 18:40:30.446] [stride_logger] [info]       Day:  309  Done, infected count:  103996
+[2019-06-19 18:40:30.635] [stride_logger] [info]       Day:  310  Done, infected count:  103996
+[2019-06-19 18:40:30.816] [stride_logger] [info]       Day:  311  Done, infected count:  103996
+[2019-06-19 18:40:31.009] [stride_logger] [info]       Day:  312  Done, infected count:  103997
+[2019-06-19 18:40:31.191] [stride_logger] [info]       Day:  313  Done, infected count:  103997
+[2019-06-19 18:40:31.375] [stride_logger] [info]       Day:  314  Done, infected count:  103998
+[2019-06-19 18:40:31.556] [stride_logger] [info]       Day:  315  Done, infected count:  103998
+[2019-06-19 18:40:31.726] [stride_logger] [info]       Day:  316  Done, infected count:  103998
+[2019-06-19 18:40:31.908] [stride_logger] [info]       Day:  317  Done, infected count:  103998
+[2019-06-19 18:40:32.096] [stride_logger] [info]       Day:  318  Done, infected count:  104000
+[2019-06-19 18:40:32.276] [stride_logger] [info]       Day:  319  Done, infected count:  104000
+[2019-06-19 18:40:32.471] [stride_logger] [info]       Day:  320  Done, infected count:  104000
+[2019-06-19 18:40:32.652] [stride_logger] [info]       Day:  321  Done, infected count:  104000
+[2019-06-19 18:40:32.826] [stride_logger] [info]       Day:  322  Done, infected count:  104000
+[2019-06-19 18:40:33.004] [stride_logger] [info]       Day:  323  Done, infected count:  104000
+[2019-06-19 18:40:33.192] [stride_logger] [info]       Day:  324  Done, infected count:  104000
+[2019-06-19 18:40:57.455] [stride_logger] [info]       Day:  325  Done, infected count:  104000
+[2019-06-19 18:40:57.637] [stride_logger] [info]       Day:  326  Done, infected count:  104000
+[2019-06-19 18:40:57.825] [stride_logger] [info]       Day:  327  Done, infected count:  104000
+[2019-06-19 18:40:58.005] [stride_logger] [info]       Day:  328  Done, infected count:  104000
+[2019-06-19 18:40:58.181] [stride_logger] [info]       Day:  329  Done, infected count:  104000
+[2019-06-19 18:40:58.351] [stride_logger] [info]       Day:  330  Done, infected count:  104001
+[2019-06-19 18:40:58.538] [stride_logger] [info]       Day:  331  Done, infected count:  104001
+[2019-06-19 18:40:58.725] [stride_logger] [info]       Day:  332  Done, infected count:  104001
+[2019-06-19 18:40:58.908] [stride_logger] [info]       Day:  333  Done, infected count:  104001
+[2019-06-19 18:40:59.091] [stride_logger] [info]       Day:  334  Done, infected count:  104001
+[2019-06-19 18:40:59.289] [stride_logger] [info]       Day:  335  Done, infected count:  104001
+[2019-06-19 18:40:59.456] [stride_logger] [info]       Day:  336  Done, infected count:  104001
+[2019-06-19 18:40:59.629] [stride_logger] [info]       Day:  337  Done, infected count:  104001
+[2019-06-19 18:40:59.813] [stride_logger] [info]       Day:  338  Done, infected count:  104001
+[2019-06-19 18:40:59.996] [stride_logger] [info]       Day:  339  Done, infected count:  104001
+[2019-06-19 18:41:00.181] [stride_logger] [info]       Day:  340  Done, infected count:  104001
+[2019-06-19 18:41:00.370] [stride_logger] [info]       Day:  341  Done, infected count:  104001
+[2019-06-19 18:41:00.552] [stride_logger] [info]       Day:  342  Done, infected count:  104001
+[2019-06-19 18:41:00.729] [stride_logger] [info]       Day:  343  Done, infected count:  104001
+[2019-06-19 18:41:00.900] [stride_logger] [info]       Day:  344  Done, infected count:  104001
+[2019-06-19 18:41:01.087] [stride_logger] [info]       Day:  345  Done, infected count:  104001
+[2019-06-19 18:41:01.276] [stride_logger] [info]       Day:  346  Done, infected count:  104001
+[2019-06-19 18:41:01.461] [stride_logger] [info]       Day:  347  Done, infected count:  104001
+[2019-06-19 18:41:01.642] [stride_logger] [info]       Day:  348  Done, infected count:  104001
+[2019-06-19 18:41:01.835] [stride_logger] [info]       Day:  349  Done, infected count:  104001
+[2019-06-19 18:41:26.117] [stride_logger] [info]       Day:  350  Done, infected count:  104001
+[2019-06-19 18:41:26.285] [stride_logger] [info]       Day:  351  Done, infected count:  104001
+[2019-06-19 18:41:26.482] [stride_logger] [info]       Day:  352  Done, infected count:  104001
+[2019-06-19 18:41:26.665] [stride_logger] [info]       Day:  353  Done, infected count:  104001
+[2019-06-19 18:41:26.852] [stride_logger] [info]       Day:  354  Done, infected count:  104001
+[2019-06-19 18:41:27.046] [stride_logger] [info]       Day:  355  Done, infected count:  104001
+[2019-06-19 18:41:27.230] [stride_logger] [info]       Day:  356  Done, infected count:  104001
+[2019-06-19 18:41:27.401] [stride_logger] [info]       Day:  357  Done, infected count:  104001
+[2019-06-19 18:41:27.584] [stride_logger] [info]       Day:  358  Done, infected count:  104001
+[2019-06-19 18:41:27.764] [stride_logger] [info]       Day:  359  Done, infected count:  104001
+[2019-06-19 18:41:27.947] [stride_logger] [info]       Day:  360  Done, infected count:  104001
+[2019-06-19 18:41:28.132] [stride_logger] [info]       Day:  361  Done, infected count:  104001
+[2019-06-19 18:41:28.337] [stride_logger] [info]       Day:  362  Done, infected count:  104001
+[2019-06-19 18:41:28.532] [stride_logger] [info]       Day:  363  Done, infected count:  104001
+[2019-06-19 18:41:28.704] [stride_logger] [info]       Day:  364  Done, infected count:  104001
+[2019-06-19 18:41:28.874] [stride_logger] [info]       Day:  365  Done, infected count:  104001
+[2019-06-19 18:41:29.069] [stride_logger] [info]       Day:  366  Done, infected count:  104001
+[2019-06-19 18:41:29.249] [stride_logger] [info]       Day:  367  Done, infected count:  104001
+[2019-06-19 18:41:29.438] [stride_logger] [info]       Day:  368  Done, infected count:  104001
+[2019-06-19 18:41:29.623] [stride_logger] [info]       Day:  369  Done, infected count:  104001
+[2019-06-19 18:41:29.805] [stride_logger] [info]       Day:  370  Done, infected count:  104001
+[2019-06-19 18:41:29.978] [stride_logger] [info]       Day:  371  Done, infected count:  104001
+[2019-06-19 18:41:30.155] [stride_logger] [info]       Day:  372  Done, infected count:  104001
+[2019-06-19 18:41:30.340] [stride_logger] [info]       Day:  373  Done, infected count:  104001
+[2019-06-19 18:41:30.540] [stride_logger] [info]       Day:  374  Done, infected count:  104001
+[2019-06-19 18:41:54.822] [stride_logger] [info]       Day:  375  Done, infected count:  104001
+[2019-06-19 18:41:55.003] [stride_logger] [info]       Day:  376  Done, infected count:  104001
+[2019-06-19 18:41:55.197] [stride_logger] [info]       Day:  377  Done, infected count:  104001
+[2019-06-19 18:41:55.364] [stride_logger] [info]       Day:  378  Done, infected count:  104001
+[2019-06-19 18:41:55.540] [stride_logger] [info]       Day:  379  Done, infected count:  104001
+[2019-06-19 18:41:55.731] [stride_logger] [info]       Day:  380  Done, infected count:  104001
+[2019-06-19 18:41:55.915] [stride_logger] [info]       Day:  381  Done, infected count:  104001
+[2019-06-19 18:41:56.096] [stride_logger] [info]       Day:  382  Done, infected count:  104001
+[2019-06-19 18:41:56.284] [stride_logger] [info]       Day:  383  Done, infected count:  104001
+[2019-06-19 18:41:56.463] [stride_logger] [info]       Day:  384  Done, infected count:  104001
+[2019-06-19 18:41:56.635] [stride_logger] [info]       Day:  385  Done, infected count:  104001
+[2019-06-19 18:41:56.805] [stride_logger] [info]       Day:  386  Done, infected count:  104001
+[2019-06-19 18:41:56.990] [stride_logger] [info]       Day:  387  Done, infected count:  104001
+[2019-06-19 18:41:57.179] [stride_logger] [info]       Day:  388  Done, infected count:  104001
+[2019-06-19 18:41:57.362] [stride_logger] [info]       Day:  389  Done, infected count:  104001
+[2019-06-19 18:41:57.544] [stride_logger] [info]       Day:  390  Done, infected count:  104001
+[2019-06-19 18:41:57.740] [stride_logger] [info]       Day:  391  Done, infected count:  104001
+[2019-06-19 18:41:57.907] [stride_logger] [info]       Day:  392  Done, infected count:  104001
+[2019-06-19 18:41:58.080] [stride_logger] [info]       Day:  393  Done, infected count:  104001
+[2019-06-19 18:41:58.272] [stride_logger] [info]       Day:  394  Done, infected count:  104001
+[2019-06-19 18:41:58.455] [stride_logger] [info]       Day:  395  Done, infected count:  104001
+[2019-06-19 18:41:58.636] [stride_logger] [info]       Day:  396  Done, infected count:  104001
+[2019-06-19 18:41:58.822] [stride_logger] [info]       Day:  397  Done, infected count:  104001
+[2019-06-19 18:41:59.002] [stride_logger] [info]       Day:  398  Done, infected count:  104001
+[2019-06-19 18:41:59.177] [stride_logger] [info]       Day:  399  Done, infected count:  104001
+[2019-06-19 18:42:23.366] [stride_logger] [info]       Day:  400  Done, infected count:  104001
+[2019-06-19 18:42:23.559] [stride_logger] [info]       Day:  401  Done, infected count:  104001
+[2019-06-19 18:42:23.742] [stride_logger] [info]       Day:  402  Done, infected count:  104001
+[2019-06-19 18:42:23.922] [stride_logger] [info]       Day:  403  Done, infected count:  104001
+[2019-06-19 18:42:24.116] [stride_logger] [info]       Day:  404  Done, infected count:  104001
+[2019-06-19 18:42:24.297] [stride_logger] [info]       Day:  405  Done, infected count:  104001
+[2019-06-19 18:42:24.468] [stride_logger] [info]       Day:  406  Done, infected count:  104001
+[2019-06-19 18:42:24.638] [stride_logger] [info]       Day:  407  Done, infected count:  104001
+[2019-06-19 18:42:24.822] [stride_logger] [info]       Day:  408  Done, infected count:  104001
+[2019-06-19 18:42:25.013] [stride_logger] [info]       Day:  409  Done, infected count:  104001
+[2019-06-19 18:42:25.203] [stride_logger] [info]       Day:  410  Done, infected count:  104001
+[2019-06-19 18:42:25.383] [stride_logger] [info]       Day:  411  Done, infected count:  104001
+[2019-06-19 18:42:25.579] [stride_logger] [info]       Day:  412  Done, infected count:  104001
+[2019-06-19 18:42:25.746] [stride_logger] [info]       Day:  413  Done, infected count:  104001
+[2019-06-19 18:42:25.916] [stride_logger] [info]       Day:  414  Done, infected count:  104001
+[2019-06-19 18:42:26.108] [stride_logger] [info]       Day:  415  Done, infected count:  104001
+[2019-06-19 18:42:26.291] [stride_logger] [info]       Day:  416  Done, infected count:  104001
+[2019-06-19 18:42:26.475] [stride_logger] [info]       Day:  417  Done, infected count:  104001
+[2019-06-19 18:42:26.668] [stride_logger] [info]       Day:  418  Done, infected count:  104001
+[2019-06-19 18:42:26.849] [stride_logger] [info]       Day:  419  Done, infected count:  104001
+[2019-06-19 18:42:27.028] [stride_logger] [info]       Day:  420  Done, infected count:  104001
+[2019-06-19 18:42:27.195] [stride_logger] [info]       Day:  421  Done, infected count:  104001
+[2019-06-19 18:42:27.379] [stride_logger] [info]       Day:  422  Done, infected count:  104001
+[2019-06-19 18:42:27.572] [stride_logger] [info]       Day:  423  Done, infected count:  104001
+[2019-06-19 18:42:27.755] [stride_logger] [info]       Day:  424  Done, infected count:  104001
+[2019-06-19 18:42:52.016] [stride_logger] [info]       Day:  425  Done, infected count:  104001
+[2019-06-19 18:42:52.196] [stride_logger] [info]       Day:  426  Done, infected count:  104001
+[2019-06-19 18:42:52.374] [stride_logger] [info]       Day:  427  Done, infected count:  104001
+[2019-06-19 18:42:52.544] [stride_logger] [info]       Day:  428  Done, infected count:  104001
+[2019-06-19 18:42:52.726] [stride_logger] [info]       Day:  429  Done, infected count:  104001
+[2019-06-19 18:42:52.910] [stride_logger] [info]       Day:  430  Done, infected count:  104001
+[2019-06-19 18:42:53.093] [stride_logger] [info]       Day:  431  Done, infected count:  104001
+[2019-06-19 18:42:53.284] [stride_logger] [info]       Day:  432  Done, infected count:  104001
+[2019-06-19 18:42:53.468] [stride_logger] [info]       Day:  433  Done, infected count:  104001
+[2019-06-19 18:42:53.639] [stride_logger] [info]       Day:  434  Done, infected count:  104001
+[2019-06-19 18:42:53.820] [stride_logger] [info]       Day:  435  Done, infected count:  104001
+[2019-06-19 18:42:54.003] [stride_logger] [info]       Day:  436  Done, infected count:  104001
+[2019-06-19 18:42:54.187] [stride_logger] [info]       Day:  437  Done, infected count:  104001
+[2019-06-19 18:42:54.374] [stride_logger] [info]       Day:  438  Done, infected count:  104001
+[2019-06-19 18:42:54.559] [stride_logger] [info]       Day:  439  Done, infected count:  104001
+[2019-06-19 18:42:54.739] [stride_logger] [info]       Day:  440  Done, infected count:  104001
+[2019-06-19 18:42:54.912] [stride_logger] [info]       Day:  441  Done, infected count:  104001
+[2019-06-19 18:42:55.079] [stride_logger] [info]       Day:  442  Done, infected count:  104001
+[2019-06-19 18:42:55.266] [stride_logger] [info]       Day:  443  Done, infected count:  104001
+[2019-06-19 18:42:55.457] [stride_logger] [info]       Day:  444  Done, infected count:  104001
+[2019-06-19 18:42:55.643] [stride_logger] [info]       Day:  445  Done, infected count:  104001
+[2019-06-19 18:42:55.834] [stride_logger] [info]       Day:  446  Done, infected count:  104001
+[2019-06-19 18:42:56.021] [stride_logger] [info]       Day:  447  Done, infected count:  104001
+[2019-06-19 18:42:56.189] [stride_logger] [info]       Day:  448  Done, infected count:  104001
+[2019-06-19 18:42:56.371] [stride_logger] [info]       Day:  449  Done, infected count:  104001
+[2019-06-19 18:43:20.592] [stride_logger] [info]       Day:  450  Done, infected count:  104001
+[2019-06-19 18:43:20.775] [stride_logger] [info]       Day:  451  Done, infected count:  104001
+[2019-06-19 18:43:20.959] [stride_logger] [info]       Day:  452  Done, infected count:  104001
+[2019-06-19 18:43:21.151] [stride_logger] [info]       Day:  453  Done, infected count:  104001
+[2019-06-19 18:43:21.334] [stride_logger] [info]       Day:  454  Done, infected count:  104001
+[2019-06-19 18:43:21.501] [stride_logger] [info]       Day:  455  Done, infected count:  104001
+[2019-06-19 18:43:21.674] [stride_logger] [info]       Day:  456  Done, infected count:  104001
+[2019-06-19 18:43:21.857] [stride_logger] [info]       Day:  457  Done, infected count:  104001
+[2019-06-19 18:43:22.041] [stride_logger] [info]       Day:  458  Done, infected count:  104001
+[2019-06-19 18:43:22.227] [stride_logger] [info]       Day:  459  Done, infected count:  104001
+[2019-06-19 18:43:22.416] [stride_logger] [info]       Day:  460  Done, infected count:  104001
+[2019-06-19 18:43:22.607] [stride_logger] [info]       Day:  461  Done, infected count:  104001
+[2019-06-19 18:43:22.778] [stride_logger] [info]       Day:  462  Done, infected count:  104001
+[2019-06-19 18:43:22.948] [stride_logger] [info]       Day:  463  Done, infected count:  104001
+[2019-06-19 18:43:23.147] [stride_logger] [info]       Day:  464  Done, infected count:  104001
+[2019-06-19 18:43:23.333] [stride_logger] [info]       Day:  465  Done, infected count:  104001
+[2019-06-19 18:43:23.517] [stride_logger] [info]       Day:  466  Done, infected count:  104001
+[2019-06-19 18:43:23.700] [stride_logger] [info]       Day:  467  Done, infected count:  104001
+[2019-06-19 18:43:23.883] [stride_logger] [info]       Day:  468  Done, infected count:  104001
+[2019-06-19 18:43:24.053] [stride_logger] [info]       Day:  469  Done, infected count:  104001
+[2019-06-19 18:43:24.226] [stride_logger] [info]       Day:  470  Done, infected count:  104001
+[2019-06-19 18:43:24.416] [stride_logger] [info]       Day:  471  Done, infected count:  104001
+[2019-06-19 18:43:24.611] [stride_logger] [info]       Day:  472  Done, infected count:  104001
+[2019-06-19 18:43:24.793] [stride_logger] [info]       Day:  473  Done, infected count:  104001
+[2019-06-19 18:43:24.978] [stride_logger] [info]       Day:  474  Done, infected count:  104001
+[2019-06-19 18:43:49.246] [stride_logger] [info]       Day:  475  Done, infected count:  104001
+[2019-06-19 18:43:49.425] [stride_logger] [info]       Day:  476  Done, infected count:  104001
+[2019-06-19 18:43:49.597] [stride_logger] [info]       Day:  477  Done, infected count:  104001
+[2019-06-19 18:43:49.778] [stride_logger] [info]       Day:  478  Done, infected count:  104001
+[2019-06-19 18:43:49.970] [stride_logger] [info]       Day:  479  Done, infected count:  104001
+[2019-06-19 18:43:50.155] [stride_logger] [info]       Day:  480  Done, infected count:  104001
+[2019-06-19 18:43:50.340] [stride_logger] [info]       Day:  481  Done, infected count:  104001
+[2019-06-19 18:43:50.527] [stride_logger] [info]       Day:  482  Done, infected count:  104001
+[2019-06-19 18:43:50.699] [stride_logger] [info]       Day:  483  Done, infected count:  104001
+[2019-06-19 18:43:50.872] [stride_logger] [info]       Day:  484  Done, infected count:  104001
+[2019-06-19 18:43:51.060] [stride_logger] [info]       Day:  485  Done, infected count:  104001
+[2019-06-19 18:43:51.240] [stride_logger] [info]       Day:  486  Done, infected count:  104001
+[2019-06-19 18:43:51.437] [stride_logger] [info]       Day:  487  Done, infected count:  104001
+[2019-06-19 18:43:51.619] [stride_logger] [info]       Day:  488  Done, infected count:  104001
+[2019-06-19 18:43:51.802] [stride_logger] [info]       Day:  489  Done, infected count:  104001
+[2019-06-19 18:43:51.974] [stride_logger] [info]       Day:  490  Done, infected count:  104001
+[2019-06-19 18:43:52.146] [stride_logger] [info]       Day:  491  Done, infected count:  104001
+[2019-06-19 18:43:52.326] [stride_logger] [info]       Day:  492  Done, infected count:  104001
+[2019-06-19 18:43:52.510] [stride_logger] [info]       Day:  493  Done, infected count:  104001
+[2019-06-19 18:43:52.692] [stride_logger] [info]       Day:  494  Done, infected count:  104001
+[2019-06-19 18:43:52.875] [stride_logger] [info]       Day:  495  Done, infected count:  104001
+[2019-06-19 18:43:53.058] [stride_logger] [info]       Day:  496  Done, infected count:  104001
+[2019-06-19 18:43:53.233] [stride_logger] [info]       Day:  497  Done, infected count:  104001
+[2019-06-19 18:43:53.408] [stride_logger] [info]       Day:  498  Done, infected count:  104001
+[2019-06-19 18:43:53.593] [stride_logger] [info]       Day:  499  Done, infected count:  104001
+[2019-06-19 18:44:17.848] [stride_logger] [info]       Day:  500  Done, infected count:  104001
+[2019-06-19 18:44:17.980] [stride_logger] [info]    SimRunner done after: 00:10:14:730:113
+[2019-06-19 18:44:17.981] [stride_logger] [info] SimController shutting down after: 00:10:21:057:110
