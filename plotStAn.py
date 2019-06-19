@@ -29,9 +29,9 @@ def averageCumulative(file, amount_of_days, amount_of_simulations, name):
 
 def average_of_files(files):
     files = files[1:]
-    amount_of_days = 50
+    amount_of_days = 300
     amount_of_simulations = 100
-    names = ['DayPre', 'Broeckho'] #['Flanders', 'Belgium', 'Flanders as part of Belgium']
+    names = ['Flanders', 'Belgium', 'Flanders as part of Belgium']
 
     if not len(names) == len(files):
         print('Not enough/too much names provided in the code!')
